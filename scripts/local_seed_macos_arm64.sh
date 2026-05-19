@@ -52,8 +52,10 @@ if [[ ! -d ardupilot/.git ]]; then
 fi
 
 # Build the list of (vehicle, version, tag) to seed. Read straight from the
-# repo's manifest.json — single source of truth.
-mapfile -t TARGETS < <(/usr/bin/python3 - <<PY
+# repo's manifest.json — single source of truth. macOS ships bash 3.2 which
+# lacks `mapfile`, so use a temp file and a portable read loop.
+TARGETS_FILE="$WORK/.targets.tsv"
+/usr/bin/python3 - <<PY > "$TARGETS_FILE"
 import json
 m = json.load(open("$REPO_ROOT/manifest.json"))
 vf = "$vehicle_filter" or None
@@ -67,21 +69,21 @@ for b in m["builds"]:
         continue
     print(f"{b['vehicle']}\t{b['version']}\t{b['ardupilotTag']}")
 PY
-)
 
-if [[ ${#TARGETS[@]} -eq 0 ]]; then
+n_targets=$(wc -l < "$TARGETS_FILE" | tr -d ' ')
+if [[ "$n_targets" -eq 0 ]]; then
   echo "Nothing to do — macos-arm64 column is complete (or filters matched nothing)."
   exit 0
 fi
 
-echo "==> will build ${#TARGETS[@]} macos-arm64 binaries:"
-for line in "${TARGETS[@]}"; do echo "    $line"; done
+echo "==> will build $n_targets macos-arm64 binaries:"
+cat "$TARGETS_FILE" | sed 's/^/    /'
 echo
 
 success=0
 fail=0
-for line in "${TARGETS[@]}"; do
-  IFS=$'\t' read -r vehicle version tag <<<"$line"
+while IFS=$'\t' read -r vehicle version tag; do
+  [[ -z "$vehicle" ]] && continue
   asset="ardupilot-sitl-${tag}-macos-arm64.tar.gz"
 
   echo "================================================================"
@@ -119,7 +121,7 @@ for line in "${TARGETS[@]}"; do
 
   success=$((success+1))
   echo "  uploaded $asset"
-done
+done < "$TARGETS_FILE"
 
 echo
 echo "================================================================"
