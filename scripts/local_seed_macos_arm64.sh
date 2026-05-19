@@ -103,7 +103,11 @@ while IFS=$'\t' read -r vehicle version tag; do
   git checkout -f "$tag"
   git submodule sync --recursive
   git submodule update --init --recursive --jobs 4
-  git clean -fdx --exclude=build
+  # Wipe the waf build dir between tags. Keeping it would let stale .o files
+  # from a newer tag relink as the older tag's binary in seconds — a 20-second
+  # "success" that's actually a Frankenbinary. Pay the ~4-min cost per build
+  # to get a genuinely correct artifact.
+  git clean -fdx
 
   cd "$WORK"
   rm -rf build-out dist
