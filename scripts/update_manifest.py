@@ -80,25 +80,35 @@ def fetch_sha(repo: str, tag: str, name: str) -> str:
 
 
 def fetch_upstream_release_date(tag: str) -> str:
-    """Date the ArduPilot tag itself was created (not when we built it)."""
+    """Date the ArduPilot tag itself was created (not when we built it).
+
+    Annotated tags expose the date on the tag object; lightweight tags point
+    straight at a commit and 404 on /git/tags/<sha>. Fall back to the commit
+    committer date in that case.
+    """
     out = subprocess.check_output(
         ["gh", "api", f"/repos/ArduPilot/ardupilot/git/refs/tags/{tag}"],
         text=True,
     )
-    sha = json.loads(out)["object"]["sha"]
-    obj = subprocess.check_output(
-        ["gh", "api", f"/repos/ArduPilot/ardupilot/git/tags/{sha}"],
+    ref = json.loads(out)
+    sha = ref["object"]["sha"]
+    ref_type = ref["object"].get("type", "commit")
+
+    if ref_type == "tag":
+        try:
+            obj = subprocess.check_output(
+                ["gh", "api", f"/repos/ArduPilot/ardupilot/git/tags/{sha}"],
+                text=True,
+            )
+            return json.loads(obj)["tagger"]["date"][:10]
+        except (subprocess.CalledProcessError, KeyError):
+            pass
+
+    commit = subprocess.check_output(
+        ["gh", "api", f"/repos/ArduPilot/ardupilot/commits/{sha}"],
         text=True,
     )
-    try:
-        return json.loads(obj)["tagger"]["date"][:10]
-    except KeyError:
-        # Lightweight tag — fall back to the commit date.
-        commit = subprocess.check_output(
-            ["gh", "api", f"/repos/ArduPilot/ardupilot/commits/{tag}"],
-            text=True,
-        )
-        return json.loads(commit)["commit"]["committer"]["date"][:10]
+    return json.loads(commit)["commit"]["committer"]["date"][:10]
 
 
 def main() -> int:

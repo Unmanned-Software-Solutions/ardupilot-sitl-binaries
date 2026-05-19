@@ -1,61 +1,32 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-19T00:00:00Z",
+  "updatedAt": "2026-05-19T08:47:26Z",
   "stable": {
-    "copter": "4.6.3",
-    "plane": "4.6.3",
-    "rover": "4.6.3",
-    "tracker": "4.6.3",
-    "sub": "4.5.7"
+    "copter": "4.6.3"
   },
   "builds": [
     {
       "vehicle": "copter",
       "version": "4.6.3",
       "ardupilotTag": "Copter-4.6.3",
-      "ardupilotReleasedAt": "2025-11-20",
+      "ardupilotReleasedAt": "2025-11-17",
       "ourReleaseTag": "Copter-4.6.3",
       "wafTarget": "copter",
       "platforms": {
-        "linux-x64": {
-          "asset": "ardupilot-sitl-Copter-4.6.3-linux-x64.tar.gz",
-          "sha256": "<filled-in-by-build>",
-          "executable": "bin/ArduCopter"
-        },
         "linux-arm64": {
           "asset": "ardupilot-sitl-Copter-4.6.3-linux-arm64.tar.gz",
-          "sha256": "<filled-in-by-build>",
+          "sha256": "a6ae42d6f13eb03b6721126c250f9b8ddb9dc983d581c84cfa69e3764e331c6f",
           "executable": "bin/ArduCopter"
         },
-        "macos-x64": {
-          "asset": "ardupilot-sitl-Copter-4.6.3-macos-x64.tar.gz",
-          "sha256": "<filled-in-by-build>",
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Copter-4.6.3-linux-x64.tar.gz",
+          "sha256": "277d8be62e0aa9b6a37159c30b4be64c2c8bcc6899c54ae3ca79038088ef2a18",
           "executable": "bin/ArduCopter"
         },
         "macos-arm64": {
           "asset": "ardupilot-sitl-Copter-4.6.3-macos-arm64.tar.gz",
-          "sha256": "<filled-in-by-build>",
+          "sha256": "c34f6b32b662d9661d09a4d8afa099eb697a0e1406a01b0bb3a61bd7886132e7",
           "executable": "bin/ArduCopter"
-        },
-        "windows-x64": {
-          "asset": "ardupilot-sitl-Copter-4.6.3-windows-x64.zip",
-          "sha256": "<filled-in-by-build>",
-          "executable": "bin/ArduCopter.exe"
-        }
-      }
-    },
-    {
-      "vehicle": "rover",
-      "version": "4.6.3",
-      "ardupilotTag": "Rover-4.6.3",
-      "ardupilotReleasedAt": "2025-11-04",
-      "ourReleaseTag": "Rover-4.6.3",
-      "wafTarget": "rover",
-      "platforms": {
-        "linux-x64": {
-          "asset": "ardupilot-sitl-Rover-4.6.3-linux-x64.tar.gz",
-          "sha256": "<filled-in-by-build>",
-          "executable": "bin/ArduRover"
         }
       }
     }
