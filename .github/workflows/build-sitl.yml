@@ -144,24 +144,6 @@ jobs:
             dist/ardupilot-sitl-${{ inputs.ardupilot_tag }}-${{ matrix.platform }}.${{ matrix.ext }}
             dist/ardupilot-sitl-${{ inputs.ardupilot_tag }}-${{ matrix.platform }}.${{ matrix.ext }}.sha256
 
-  update-manifest:
-    needs: build
-    # Run even if some non-blocking matrix entries (windows, macos-x64) failed —
-    # the manifest just won't list those platforms until they're built later.
-    if: always() && !cancelled()
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: { python-version: "3.11" }
-      - name: Regenerate manifest.json
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/update_manifest.py
-      - name: Commit manifest update
-        run: |
-          git config user.name "sitl-binaries-bot"
-          git config user.email "sitl-binaries-bot@users.noreply.github.com"
-          git add manifest.json
-          git commit -m "Update manifest after ${{ inputs.ardupilot_tag }}" || echo "no changes"
-          git push
+# Manifest regeneration is its own workflow (`update-manifest.yml`) triggered on
+# `release: published`. Decoupling avoids waiting on slow runners (macos-13 queues
+# for hours, windows is still placeholder) to publish the manifest for the rest.

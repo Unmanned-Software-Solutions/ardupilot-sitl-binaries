@@ -1,0 +1,48 @@
+name: Update manifest
+
+# Regenerates manifest.json from the assets currently published in this repo's
+# releases. Deliberately decoupled from the build matrix: it would otherwise be
+# gated on every (vehicle × version × platform) build in a discover-versions
+# fan-out, including macos-13 jobs that can queue for hours. Triggering on
+# `release: published` keeps the manifest current as each individual asset
+# lands, regardless of which platform was last to finish.
+
+on:
+  release:
+    types: [published, edited]
+  workflow_dispatch: {}
+  # Also poll a few times per day so the manifest catches up if a release was
+  # mutated outside of the release event (e.g. an asset re-uploaded manually).
+  schedule:
+    - cron: "13 */4 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  # Coalesce overlapping triggers — no point regenerating twice in flight.
+  group: update-manifest
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: Regenerate manifest.json
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/update_manifest.py
+      - name: Commit if changed
+        run: |
+          git config user.name "sitl-binaries-bot"
+          git config user.email "sitl-binaries-bot@users.noreply.github.com"
+          if git diff --quiet manifest.json; then
+            echo "manifest unchanged"
+          else
+            git add manifest.json
+            git commit -m "Refresh manifest"
+            git push
+          fi
