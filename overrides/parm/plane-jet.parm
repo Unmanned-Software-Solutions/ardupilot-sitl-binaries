@@ -1,0 +1,4 @@
+# RLL_RATE_D 0.000000 in https://github.com/ArduPilot/ardupilot/blob/master/Tools/autotest/default_params/plane-jet.parm#L15
+RLL_RATE_D 0.017430
+AIRSPEED_MAX 90.0
+AIRSPEED_CRUISE 50.0
