@@ -1,0 +1,45 @@
+name: Discover new ArduPilot versions
+
+# Polls ArduPilot's git tag list every 6h. For every (vehicle, version) we
+# haven't published yet AND that is >= 4.5.0, dispatches build-sitl.yml.
+# Tag-based (not Releases-based) because ArduPilot tags many versions without
+# creating a GitHub Release entry — using /releases would miss ~30% of versions.
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+
+      - name: Find missing builds
+        id: scan
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/find_missing_builds.py > missing.json
+
+      - name: Dispatch builds
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          jq -c '.[]' missing.json | while read -r row; do
+            vehicle=$(echo "$row" | jq -r .vehicle)
+            version=$(echo "$row" | jq -r .version)
+            tag=$(echo "$row"     | jq -r .ardupilotTag)
+            echo "Dispatching build for $tag"
+            gh workflow run build-sitl.yml \
+              --ref main \
+              -f ardupilot_tag="$tag" \
+              -f vehicle="$vehicle" \
+              -f version="$version"
+          done
