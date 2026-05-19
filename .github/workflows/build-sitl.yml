@@ -50,17 +50,39 @@ jobs:
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.continue }}
     steps:
+      - name: Skip if asset already published
+        # Cheap check up front: if the release tag already has our asset, mark this
+        # job as "already done" and skip every subsequent step. Saves the bulk of CI
+        # minutes on retry runs where most platforms succeeded on a previous attempt.
+        id: skip
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          asset="ardupilot-sitl-${{ inputs.ardupilot_tag }}-${{ matrix.platform }}.${{ matrix.ext }}"
+          if gh release view "${{ inputs.ardupilot_tag }}" \
+               --repo "${GITHUB_REPOSITORY}" \
+               --json assets --jq '.assets[].name' 2>/dev/null | grep -Fxq "$asset"; then
+            echo "asset $asset already published — skipping"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "asset $asset not yet published — will build"
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Enable long paths (Windows)
-        if: startsWith(matrix.os, 'windows')
+        if: startsWith(matrix.os, 'windows') && steps.skip.outputs.skip != 'true'
         shell: pwsh
         run: |
           git config --system core.longpaths true
           git config --global core.longpaths true
 
       - name: Checkout this repo
+        if: steps.skip.outputs.skip != 'true'
         uses: actions/checkout@v4
 
       - name: Checkout ArduPilot at ${{ inputs.ardupilot_tag }}
+        if: steps.skip.outputs.skip != 'true'
         uses: actions/checkout@v4
         with:
           repository: ArduPilot/ardupilot
@@ -69,7 +91,7 @@ jobs:
           submodules: recursive
 
       - name: Install build deps (Linux)
-        if: startsWith(matrix.os, 'ubuntu')
+        if: startsWith(matrix.os, 'ubuntu') && steps.skip.outputs.skip != 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y python3-pip python3-dev python3-numpy \
@@ -78,7 +100,7 @@ jobs:
           cd ardupilot && Tools/environment_install/install-prereqs-ubuntu.sh -y
 
       - name: Install build deps (macOS)
-        if: startsWith(matrix.os, 'macos')
+        if: startsWith(matrix.os, 'macos') && steps.skip.outputs.skip != 'true'
         # `pexpect` is what tripped the first attempt — waf imports it during
         # the bin-embed step even though we're not running autotest. Everything
         # else in this list shows up in ArduPilot's own macOS prereqs script.
@@ -88,7 +110,7 @@ jobs:
             pyserial pymavlink future lxml empy pexpect fastcrc dronecan
 
       - name: Install build deps (Windows / Cygwin)
-        if: startsWith(matrix.os, 'windows')
+        if: startsWith(matrix.os, 'windows') && steps.skip.outputs.skip != 'true'
         # ArduPilot's Windows SITL build path is Cygwin — see ArduPilot's own
         # Tools/scripts/build_ci.sh for the canonical script that Mission Planner uses.
         run: |
@@ -98,14 +120,17 @@ jobs:
         shell: pwsh
 
       - name: Build SITL
+        if: steps.skip.outputs.skip != 'true'
         shell: bash
         run: bash scripts/build_one.sh "${{ inputs.vehicle }}" "${{ inputs.ardupilot_tag }}" "${{ matrix.platform }}"
 
       - name: Package archive
+        if: steps.skip.outputs.skip != 'true'
         shell: bash
         run: bash scripts/package_one.sh "${{ inputs.vehicle }}" "${{ inputs.ardupilot_tag }}" "${{ matrix.platform }}" "${{ matrix.ext }}"
 
       - name: Upload to GitHub Release
+        if: steps.skip.outputs.skip != 'true'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ inputs.ardupilot_tag }}
