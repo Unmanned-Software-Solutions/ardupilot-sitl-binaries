@@ -36,6 +36,14 @@ canonical_out_name() {
 
 cd ardupilot
 
+# macOS arm64 link fix for ArduPilot ≤ 4.5.5: the modern Apple linker enforces
+# pointer alignment that AP_FWVersion::fwver didn't satisfy until 4.5.6. The
+# `ld_classic` flag falls back to the older linker which tolerates the old
+# layout. Harmless on newer versions where the issue is already fixed.
+if [[ "$platform" == macos-* ]]; then
+  export LDFLAGS="${LDFLAGS:-} -Wl,-ld_classic"
+fi
+
 ./waf configure --board sitl
 ./waf "$waf_target"
 
