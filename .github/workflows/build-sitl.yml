@@ -101,13 +101,15 @@ jobs:
 
       - name: Install build deps (macOS)
         if: startsWith(matrix.os, 'macos') && steps.skip.outputs.skip != 'true'
-        # `pexpect` is what tripped the first attempt — waf imports it during
-        # the bin-embed step even though we're not running autotest. Everything
-        # else in this list shows up in ArduPilot's own macOS prereqs script.
+        # empy is pinned to 3.3.4: ArduPilot's dronecan generator uses the old `@)`
+        # markup that was removed in empy 4.x, so picking up the current pip default
+        # breaks the build with `unknown markup sequence: '@)'`. pexpect must be
+        # present because waf imports it during the bin-embed step. Ubuntu's apt
+        # ships a compatible empy as python3-empy so the Linux path is unaffected.
         run: |
           brew install ccache wget
           pip3 install --break-system-packages \
-            pyserial pymavlink future lxml empy pexpect fastcrc dronecan
+            pyserial pymavlink future lxml 'empy==3.3.4' pexpect fastcrc dronecan
 
       - name: Install build deps (Windows / Cygwin)
         if: startsWith(matrix.os, 'windows') && steps.skip.outputs.skip != 'true'
