@@ -1,10 +1,1074 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-19T08:47:26Z",
+  "updatedAt": "2026-05-19T09:24:08Z",
   "stable": {
-    "copter": "4.6.3"
+    "tracker": "4.6.3",
+    "rover": "4.6.3",
+    "plane": "4.6.3",
+    "copter": "4.6.3",
+    "sub": "4.5.7"
   },
   "builds": [
+    {
+      "vehicle": "tracker",
+      "version": "4.6.2",
+      "ardupilotTag": "Tracker-4.6.2",
+      "ardupilotReleasedAt": "2025-07-17",
+      "ourReleaseTag": "Tracker-4.6.2",
+      "wafTarget": "antennatracker",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Tracker-4.6.2-linux-arm64.tar.gz",
+          "sha256": "56fcdb09184296ea6e6d863b7a33d6162fa4c6f5da080a5742d5b35604ee5f67",
+          "executable": "bin/AntennaTracker"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.6.2-linux-x64.tar.gz",
+          "sha256": "20056e58a1b1d33123d55628c532184593ede51437f98885e997ee9c3f3f102f",
+          "executable": "bin/AntennaTracker"
+        }
+      }
+    },
+    {
+      "vehicle": "tracker",
+      "version": "4.6.0",
+      "ardupilotTag": "Tracker-4.6.0",
+      "ardupilotReleasedAt": "2025-05-21",
+      "ourReleaseTag": "Tracker-4.6.0",
+      "wafTarget": "antennatracker",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Tracker-4.6.0-linux-arm64.tar.gz",
+          "sha256": "b0a02fa591132293f9b89320adee6cd90b8b13d1681e77672778e50d090a7a9a",
+          "executable": "bin/AntennaTracker"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.6.0-linux-x64.tar.gz",
+          "sha256": "72ca295738e4ab34dcc49a60f8ebf763358c343bbfd68ac61b526ba8b927cac7",
+          "executable": "bin/AntennaTracker"
+        }
+      }
+    },
+    {
+      "vehicle": "tracker",
+      "version": "4.6.1",
+      "ardupilotTag": "Tracker-4.6.1",
+      "ardupilotReleasedAt": "2025-06-19",
+      "ourReleaseTag": "Tracker-4.6.1",
+      "wafTarget": "antennatracker",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Tracker-4.6.1-linux-arm64.tar.gz",
+          "sha256": "079cf217b84ab49c2d4236e707fd13fdeefd610b9df380b0e414ada3c35f01fa",
+          "executable": "bin/AntennaTracker"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.6.1-linux-x64.tar.gz",
+          "sha256": "c8a384abe54fad4bd41092d042a0437adcde55f5d175613b09a2871a0ecc44ad",
+          "executable": "bin/AntennaTracker"
+        }
+      }
+    },
+    {
+      "vehicle": "tracker",
+      "version": "4.6.3",
+      "ardupilotTag": "Tracker-4.6.3",
+      "ardupilotReleasedAt": "2025-11-03",
+      "ourReleaseTag": "Tracker-4.6.3",
+      "wafTarget": "antennatracker",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Tracker-4.6.3-linux-arm64.tar.gz",
+          "sha256": "896e1d0e94653ddd82d4be76213ed440766fdad1a03509cbcf53cf53fa03a3b5",
+          "executable": "bin/AntennaTracker"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.6.3-linux-x64.tar.gz",
+          "sha256": "667a5e6d1a4049d953d5b101bcb40820878fccdb3a4efcd694d378a1ec1e48f9",
+          "executable": "bin/AntennaTracker"
+        }
+      }
+    },
+    {
+      "vehicle": "tracker",
+      "version": "4.5.6",
+      "ardupilotTag": "Tracker-4.5.6",
+      "ardupilotReleasedAt": "2024-09-03",
+      "ourReleaseTag": "Tracker-4.5.6",
+      "wafTarget": "antennatracker",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.6-linux-arm64.tar.gz",
+          "sha256": "d08dc93da2404a098d0fd7ea004c874e1e424c57bf80b94ee6313d72b66b92da",
+          "executable": "bin/AntennaTracker"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.6-linux-x64.tar.gz",
+          "sha256": "08e7a3db1a365a5d7216d5df4734dac8c613f7dd12d46f499831ca953e9bd9ff",
+          "executable": "bin/AntennaTracker"
+        }
+      }
+    },
+    {
+      "vehicle": "tracker",
+      "version": "4.5.7",
+      "ardupilotTag": "Tracker-4.5.7",
+      "ardupilotReleasedAt": "2024-10-16",
+      "ourReleaseTag": "Tracker-4.5.7",
+      "wafTarget": "antennatracker",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.7-linux-arm64.tar.gz",
+          "sha256": "254737cbe722c80e3133493937bf60f585c5d35d5f832895f3d49dd12bff126f",
+          "executable": "bin/AntennaTracker"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.7-linux-x64.tar.gz",
+          "sha256": "fc1d7b4b3dfd282163b3f7161a76fc4a622ec6d5fa3bc3ec249be8b4790900b3",
+          "executable": "bin/AntennaTracker"
+        }
+      }
+    },
+    {
+      "vehicle": "tracker",
+      "version": "4.5.5",
+      "ardupilotTag": "Tracker-4.5.5",
+      "ardupilotReleasedAt": "2024-08-01",
+      "ourReleaseTag": "Tracker-4.5.5",
+      "wafTarget": "antennatracker",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.5-linux-arm64.tar.gz",
+          "sha256": "81a395b36cdeb77b023fc8c2927fca75a91a1d9257fd64a17e392501aed7e667",
+          "executable": "bin/AntennaTracker"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.5-linux-x64.tar.gz",
+          "sha256": "1881ae74ebc3bd43ca8066d3f61edda555d0ae9ee7fbb91f3e2329d8af07a2a9",
+          "executable": "bin/AntennaTracker"
+        }
+      }
+    },
+    {
+      "vehicle": "tracker",
+      "version": "4.5.2",
+      "ardupilotTag": "Tracker-4.5.2",
+      "ardupilotReleasedAt": "2024-05-14",
+      "ourReleaseTag": "Tracker-4.5.2",
+      "wafTarget": "antennatracker",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.2-linux-arm64.tar.gz",
+          "sha256": "1f1d9eaa12a8c40de17b7b981d0a0b489bfcb89841e5b79b76778581e518dbe6",
+          "executable": "bin/AntennaTracker"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.2-linux-x64.tar.gz",
+          "sha256": "3f685f1d8cfb38d2f7be9121e184682240f763f2430c45f211be46f18657708a",
+          "executable": "bin/AntennaTracker"
+        }
+      }
+    },
+    {
+      "vehicle": "tracker",
+      "version": "4.5.4",
+      "ardupilotTag": "Tracker-4.5.4",
+      "ardupilotReleasedAt": "2024-06-15",
+      "ourReleaseTag": "Tracker-4.5.4",
+      "wafTarget": "antennatracker",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.4-linux-arm64.tar.gz",
+          "sha256": "2d48e320b3173386d65b81fdcc8250294d397d0044852ae4acb6b6a50ae1d5ae",
+          "executable": "bin/AntennaTracker"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.4-linux-x64.tar.gz",
+          "sha256": "2dac64147d7d256e5a416f681478e99b20edd8c1f5d5fc891da0034ca5636d12",
+          "executable": "bin/AntennaTracker"
+        }
+      }
+    },
+    {
+      "vehicle": "rover",
+      "version": "4.6.3",
+      "ardupilotTag": "Rover-4.6.3",
+      "ardupilotReleasedAt": "2025-11-03",
+      "ourReleaseTag": "Rover-4.6.3",
+      "wafTarget": "rover",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Rover-4.6.3-linux-arm64.tar.gz",
+          "sha256": "0a78b7537e685906338b2f59fb5b9a8afc2385644231743d2bd65a85dccf85c4",
+          "executable": "bin/ArduRover"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Rover-4.6.3-linux-x64.tar.gz",
+          "sha256": "b3135fcc93e1b784df2f78655556c868ee1723874469f2d804e4fa185fb1dac5",
+          "executable": "bin/ArduRover"
+        }
+      }
+    },
+    {
+      "vehicle": "tracker",
+      "version": "4.5.1",
+      "ardupilotTag": "Tracker-4.5.1",
+      "ardupilotReleasedAt": "2024-04-08",
+      "ourReleaseTag": "Tracker-4.5.1",
+      "wafTarget": "antennatracker",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.1-linux-arm64.tar.gz",
+          "sha256": "cc30fce897d7d2ab1e74c3627e0867f14461bceb639707e59771d7da044a48c7",
+          "executable": "bin/AntennaTracker"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.1-linux-x64.tar.gz",
+          "sha256": "ccc874d346097d8c300b8e1b1d8626ae3737ba3ee35835c13721119383fc35b5",
+          "executable": "bin/AntennaTracker"
+        }
+      }
+    },
+    {
+      "vehicle": "tracker",
+      "version": "4.5.3",
+      "ardupilotTag": "Tracker-4.5.3",
+      "ardupilotReleasedAt": "2024-05-28",
+      "ourReleaseTag": "Tracker-4.5.3",
+      "wafTarget": "antennatracker",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.3-linux-arm64.tar.gz",
+          "sha256": "45d89e6d143e0be9f83e0fb8a3db5aa1ec5e9dc3bb5322931d358172d5c107da",
+          "executable": "bin/AntennaTracker"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.3-linux-x64.tar.gz",
+          "sha256": "5c4600c48ec2c740aae3796592f4ccee492fb77db8c7dccf13a8d3e1182141ad",
+          "executable": "bin/AntennaTracker"
+        }
+      }
+    },
+    {
+      "vehicle": "tracker",
+      "version": "4.5.0",
+      "ardupilotTag": "Tracker-4.5.0",
+      "ardupilotReleasedAt": "2024-04-02",
+      "ourReleaseTag": "Tracker-4.5.0",
+      "wafTarget": "antennatracker",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.0-linux-arm64.tar.gz",
+          "sha256": "58a1888c015bf24fab2912d5bd0b721a4aacb1b71e4c87475049a32317a50e25",
+          "executable": "bin/AntennaTracker"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.0-linux-x64.tar.gz",
+          "sha256": "14c7567e6bb89088f2ad9455b91f8a6f336e2ca8834a0537d3ef874a3569a8aa",
+          "executable": "bin/AntennaTracker"
+        }
+      }
+    },
+    {
+      "vehicle": "rover",
+      "version": "4.6.2",
+      "ardupilotTag": "Rover-4.6.2",
+      "ardupilotReleasedAt": "2025-07-17",
+      "ourReleaseTag": "Rover-4.6.2",
+      "wafTarget": "rover",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Rover-4.6.2-linux-arm64.tar.gz",
+          "sha256": "7504643992db1c28a37b702fd9adf05c1df06145beb670d3fb6938e783f0a946",
+          "executable": "bin/ArduRover"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Rover-4.6.2-linux-x64.tar.gz",
+          "sha256": "216b1e6b5d8bed09bde90531e685b646a1e1fefa9183db113e8c334de4513de1",
+          "executable": "bin/ArduRover"
+        }
+      }
+    },
+    {
+      "vehicle": "plane",
+      "version": "4.6.3",
+      "ardupilotTag": "Plane-4.6.3",
+      "ardupilotReleasedAt": "2025-11-03",
+      "ourReleaseTag": "Plane-4.6.3",
+      "wafTarget": "plane",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Plane-4.6.3-linux-arm64.tar.gz",
+          "sha256": "f03cc7f2fc2398ce1e0d47b1c6ea4583e2258e5bff5867d93c1954cdb8e9d8fb",
+          "executable": "bin/ArduPlane"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Plane-4.6.3-linux-x64.tar.gz",
+          "sha256": "c4a451adffa09c951ae79254d49b94417c74559f20de924b3292d8fa06b41483",
+          "executable": "bin/ArduPlane"
+        }
+      }
+    },
+    {
+      "vehicle": "rover",
+      "version": "4.6.0",
+      "ardupilotTag": "Rover-4.6.0",
+      "ardupilotReleasedAt": "2025-05-21",
+      "ourReleaseTag": "Rover-4.6.0",
+      "wafTarget": "rover",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Rover-4.6.0-linux-arm64.tar.gz",
+          "sha256": "9952c3ed0ef982b405e0b0e4c6ce652ae9536ffed1d09caf3863621dc2e118b9",
+          "executable": "bin/ArduRover"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Rover-4.6.0-linux-x64.tar.gz",
+          "sha256": "ac725ad96e854eb672150f222f9726c011076a0c68a16c02cb2dd75ad85dbc7d",
+          "executable": "bin/ArduRover"
+        }
+      }
+    },
+    {
+      "vehicle": "rover",
+      "version": "4.5.6",
+      "ardupilotTag": "Rover-4.5.6",
+      "ardupilotReleasedAt": "2024-09-03",
+      "ourReleaseTag": "Rover-4.5.6",
+      "wafTarget": "rover",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Rover-4.5.6-linux-arm64.tar.gz",
+          "sha256": "5aea7e82ffa25b742c8cdc625487e1f2b1003fdcb267383d1545f272e658f089",
+          "executable": "bin/ArduRover"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Rover-4.5.6-linux-x64.tar.gz",
+          "sha256": "e2d46f34d4779a4731bd1badf1cfcb1c0bb86b17a793b1e76fcd242b5d4b673c",
+          "executable": "bin/ArduRover"
+        }
+      }
+    },
+    {
+      "vehicle": "plane",
+      "version": "4.6.0",
+      "ardupilotTag": "Plane-4.6.0",
+      "ardupilotReleasedAt": "2025-05-21",
+      "ourReleaseTag": "Plane-4.6.0",
+      "wafTarget": "plane",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Plane-4.6.0-linux-arm64.tar.gz",
+          "sha256": "2f74d9970b486a8812182bd09da02ae44373f5455b7b52a6cbbd57007390be49",
+          "executable": "bin/ArduPlane"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Plane-4.6.0-linux-x64.tar.gz",
+          "sha256": "6f02a76280a1e595a057c4d31ac6e5e663dc7ba726e4b00addee7df73ef1268f",
+          "executable": "bin/ArduPlane"
+        }
+      }
+    },
+    {
+      "vehicle": "rover",
+      "version": "4.5.7",
+      "ardupilotTag": "Rover-4.5.7",
+      "ardupilotReleasedAt": "2024-10-16",
+      "ourReleaseTag": "Rover-4.5.7",
+      "wafTarget": "rover",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Rover-4.5.7-linux-arm64.tar.gz",
+          "sha256": "8eca1ef0922d9545948450eda6a7b6b9040f36dfb1735d49194af3a9f1e7bcdc",
+          "executable": "bin/ArduRover"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Rover-4.5.7-linux-x64.tar.gz",
+          "sha256": "4071478889fe951e4d884aabea9df3d991c9c99735b4d987866f697b9e176d3a",
+          "executable": "bin/ArduRover"
+        }
+      }
+    },
+    {
+      "vehicle": "rover",
+      "version": "4.6.1",
+      "ardupilotTag": "Rover-4.6.1",
+      "ardupilotReleasedAt": "2025-06-19",
+      "ourReleaseTag": "Rover-4.6.1",
+      "wafTarget": "rover",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Rover-4.6.1-linux-arm64.tar.gz",
+          "sha256": "eb224db4a7dc0a5aad662d7efd55fdee19aecd4cb5122b65438e7c28e9785c56",
+          "executable": "bin/ArduRover"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Rover-4.6.1-linux-x64.tar.gz",
+          "sha256": "05aa1dae17cee0753040967d890f059f65c8f0bbf91aa2b400c32a5befdc9ad7",
+          "executable": "bin/ArduRover"
+        }
+      }
+    },
+    {
+      "vehicle": "rover",
+      "version": "4.5.2",
+      "ardupilotTag": "Rover-4.5.2",
+      "ardupilotReleasedAt": "2024-05-14",
+      "ourReleaseTag": "Rover-4.5.2",
+      "wafTarget": "rover",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Rover-4.5.2-linux-arm64.tar.gz",
+          "sha256": "6da1562907c025c74227612af9389ec3003b6313e9f17c33f9e43fc89e1ab9e0",
+          "executable": "bin/ArduRover"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Rover-4.5.2-linux-x64.tar.gz",
+          "sha256": "64a3cc93da5b01345b34b549637f8ed42f5a096b5d7afc4ded45ce221e4b3f5e",
+          "executable": "bin/ArduRover"
+        }
+      }
+    },
+    {
+      "vehicle": "rover",
+      "version": "4.5.5",
+      "ardupilotTag": "Rover-4.5.5",
+      "ardupilotReleasedAt": "2024-08-01",
+      "ourReleaseTag": "Rover-4.5.5",
+      "wafTarget": "rover",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Rover-4.5.5-linux-arm64.tar.gz",
+          "sha256": "8b009ab561994d6b1c930929a49e2825536e327456cb2323513edc0d1b4d62e4",
+          "executable": "bin/ArduRover"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Rover-4.5.5-linux-x64.tar.gz",
+          "sha256": "901193b48a09529203bc6fbaefdbd02db5a445dacf76d78c1b7756cca5d4c65f",
+          "executable": "bin/ArduRover"
+        }
+      }
+    },
+    {
+      "vehicle": "rover",
+      "version": "4.5.3",
+      "ardupilotTag": "Rover-4.5.3",
+      "ardupilotReleasedAt": "2024-05-28",
+      "ourReleaseTag": "Rover-4.5.3",
+      "wafTarget": "rover",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Rover-4.5.3-linux-arm64.tar.gz",
+          "sha256": "450a064ab3d3f88c85af0148e521bde0bdced416f22053ec9ea6b52332573f4c",
+          "executable": "bin/ArduRover"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Rover-4.5.3-linux-x64.tar.gz",
+          "sha256": "27d328a63d8a46332e133f2e6f36626c8639d5b09223bbd1572190318edf3bdf",
+          "executable": "bin/ArduRover"
+        }
+      }
+    },
+    {
+      "vehicle": "rover",
+      "version": "4.5.1",
+      "ardupilotTag": "Rover-4.5.1",
+      "ardupilotReleasedAt": "2024-04-08",
+      "ourReleaseTag": "Rover-4.5.1",
+      "wafTarget": "rover",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Rover-4.5.1-linux-arm64.tar.gz",
+          "sha256": "666a6569f55fc8c361c4a40590e6ecebab961ce3d3d4a160ad8335549370e5e1",
+          "executable": "bin/ArduRover"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Rover-4.5.1-linux-x64.tar.gz",
+          "sha256": "8a72aaeff932ba90f7e52b72a1909b4d4166824279faf541dc5b4b0c9724baa9",
+          "executable": "bin/ArduRover"
+        }
+      }
+    },
+    {
+      "vehicle": "plane",
+      "version": "4.6.1",
+      "ardupilotTag": "Plane-4.6.1",
+      "ardupilotReleasedAt": "2025-06-19",
+      "ourReleaseTag": "Plane-4.6.1",
+      "wafTarget": "plane",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Plane-4.6.1-linux-arm64.tar.gz",
+          "sha256": "27056cad35708d571a7934fae370f7fcabf859c4b64999982cb1bd5f3ddb09b9",
+          "executable": "bin/ArduPlane"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Plane-4.6.1-linux-x64.tar.gz",
+          "sha256": "ae994195fbbdb224b830c05180c2d93b03d8209c5e2e4ef1764b3fb430902eb2",
+          "executable": "bin/ArduPlane"
+        }
+      }
+    },
+    {
+      "vehicle": "rover",
+      "version": "4.5.4",
+      "ardupilotTag": "Rover-4.5.4",
+      "ardupilotReleasedAt": "2024-06-15",
+      "ourReleaseTag": "Rover-4.5.4",
+      "wafTarget": "rover",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Rover-4.5.4-linux-arm64.tar.gz",
+          "sha256": "2dd566829e4541fcf4458ded57ad70cd0c24de304140cc7fa933586f7533810c",
+          "executable": "bin/ArduRover"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Rover-4.5.4-linux-x64.tar.gz",
+          "sha256": "01581e582ec1e69e7e9ca5274648ed9ba026541acb0fecd61da2efa85dd4cf79",
+          "executable": "bin/ArduRover"
+        }
+      }
+    },
+    {
+      "vehicle": "plane",
+      "version": "4.6.2",
+      "ardupilotTag": "Plane-4.6.2",
+      "ardupilotReleasedAt": "2025-07-17",
+      "ourReleaseTag": "Plane-4.6.2",
+      "wafTarget": "plane",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Plane-4.6.2-linux-arm64.tar.gz",
+          "sha256": "8eb64a57664d6bc37abde233c2184401c7981180c6777bf5f1540c05e3b79357",
+          "executable": "bin/ArduPlane"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Plane-4.6.2-linux-x64.tar.gz",
+          "sha256": "9a4ff1bfc8fac475a56eadd31a00c0bb97547391c35816dfa0e438380b653dad",
+          "executable": "bin/ArduPlane"
+        }
+      }
+    },
+    {
+      "vehicle": "rover",
+      "version": "4.5.0",
+      "ardupilotTag": "Rover-4.5.0",
+      "ardupilotReleasedAt": "2024-04-02",
+      "ourReleaseTag": "Rover-4.5.0",
+      "wafTarget": "rover",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Rover-4.5.0-linux-arm64.tar.gz",
+          "sha256": "b548851fa284d517ca46bfd25d80e8d57a8df65c70b6bdc9c9d16991ee681ed2",
+          "executable": "bin/ArduRover"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Rover-4.5.0-linux-x64.tar.gz",
+          "sha256": "81e1ee7fb019f1baa2afe0b51a0c73cb2178a4f7ea8f3c7f4bf2c3d0e386bbfc",
+          "executable": "bin/ArduRover"
+        }
+      }
+    },
+    {
+      "vehicle": "plane",
+      "version": "4.5.7",
+      "ardupilotTag": "Plane-4.5.7",
+      "ardupilotReleasedAt": "2024-10-14",
+      "ourReleaseTag": "Plane-4.5.7",
+      "wafTarget": "plane",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Plane-4.5.7-linux-arm64.tar.gz",
+          "sha256": "b9ba3c50bd8ea5c636c11453c038c4760a97659f079fcd9004b1e8ad391c2bf9",
+          "executable": "bin/ArduPlane"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.7-linux-x64.tar.gz",
+          "sha256": "002e7c78254f70d163837f84f88d155595d11b552e898a643e83ae3ffd1099ee",
+          "executable": "bin/ArduPlane"
+        }
+      }
+    },
+    {
+      "vehicle": "plane",
+      "version": "4.5.5",
+      "ardupilotTag": "Plane-4.5.5",
+      "ardupilotReleasedAt": "2024-08-01",
+      "ourReleaseTag": "Plane-4.5.5",
+      "wafTarget": "plane",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Plane-4.5.5-linux-arm64.tar.gz",
+          "sha256": "769273b322728379aba58de46f3aa4af4e4ea68131f7ce716261c8e7955725e3",
+          "executable": "bin/ArduPlane"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.5-linux-x64.tar.gz",
+          "sha256": "40564ffee2af7545b189497ac661f51c254de91083dc963fde96afe4f25116ea",
+          "executable": "bin/ArduPlane"
+        }
+      }
+    },
+    {
+      "vehicle": "plane",
+      "version": "4.5.4",
+      "ardupilotTag": "Plane-4.5.4",
+      "ardupilotReleasedAt": "2024-06-15",
+      "ourReleaseTag": "Plane-4.5.4",
+      "wafTarget": "plane",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Plane-4.5.4-linux-arm64.tar.gz",
+          "sha256": "72c288b15e766c0feb9d2b0a70c9bc5c6126221d2fa7e4aebb46865e2d28f590",
+          "executable": "bin/ArduPlane"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.4-linux-x64.tar.gz",
+          "sha256": "de272c04dbcdb31594b700b56a658d707b15a7cb4f6be8f750cdbdd9108ba1b3",
+          "executable": "bin/ArduPlane"
+        }
+      }
+    },
+    {
+      "vehicle": "plane",
+      "version": "4.5.3",
+      "ardupilotTag": "Plane-4.5.3",
+      "ardupilotReleasedAt": "2024-05-28",
+      "ourReleaseTag": "Plane-4.5.3",
+      "wafTarget": "plane",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Plane-4.5.3-linux-arm64.tar.gz",
+          "sha256": "dca32a6352878e3648c26c8b5dde305fe17a30c9cfdfb26bb224645e847ec00a",
+          "executable": "bin/ArduPlane"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.3-linux-x64.tar.gz",
+          "sha256": "52da73d819d4f21ff8b0ce5b423e65dfed72e610f2bb63c4d1f1979477e9944f",
+          "executable": "bin/ArduPlane"
+        }
+      }
+    },
+    {
+      "vehicle": "plane",
+      "version": "4.5.6",
+      "ardupilotTag": "Plane-4.5.6",
+      "ardupilotReleasedAt": "2024-09-03",
+      "ourReleaseTag": "Plane-4.5.6",
+      "wafTarget": "plane",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Plane-4.5.6-linux-arm64.tar.gz",
+          "sha256": "35031a9f910501d655117925b07480f8f0eef0660a481e5dcb35fc313d3c4ad6",
+          "executable": "bin/ArduPlane"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.6-linux-x64.tar.gz",
+          "sha256": "1608d27d26c89f0c6ab5f7fab3cf37292a2ea1ebba41d1e83b063c4c116b7563",
+          "executable": "bin/ArduPlane"
+        }
+      }
+    },
+    {
+      "vehicle": "plane",
+      "version": "4.5.2",
+      "ardupilotTag": "Plane-4.5.2",
+      "ardupilotReleasedAt": "2024-05-14",
+      "ourReleaseTag": "Plane-4.5.2",
+      "wafTarget": "plane",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Plane-4.5.2-linux-arm64.tar.gz",
+          "sha256": "a17557e1cdc3a342d3860ff94a846b940ad90a87a070dbd577fea19090e65e55",
+          "executable": "bin/ArduPlane"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.2-linux-x64.tar.gz",
+          "sha256": "5621ed26739993c0670500436b44bf420f6334cb0864cb7767ac1e5b73fd5deb",
+          "executable": "bin/ArduPlane"
+        }
+      }
+    },
+    {
+      "vehicle": "plane",
+      "version": "4.5.1",
+      "ardupilotTag": "Plane-4.5.1",
+      "ardupilotReleasedAt": "2024-04-08",
+      "ourReleaseTag": "Plane-4.5.1",
+      "wafTarget": "plane",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Plane-4.5.1-linux-arm64.tar.gz",
+          "sha256": "406d991f70beeafa187c9113bca52597791a08e5f3231b20258dea3f3b579403",
+          "executable": "bin/ArduPlane"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.1-linux-x64.tar.gz",
+          "sha256": "d9e5937abb7dbc73b2cc2b4c0f6201ff9c692d4fc4f1879024370c1d15d47783",
+          "executable": "bin/ArduPlane"
+        }
+      }
+    },
+    {
+      "vehicle": "copter",
+      "version": "4.5.1",
+      "ardupilotTag": "Copter-4.5.1",
+      "ardupilotReleasedAt": "2024-04-08",
+      "ourReleaseTag": "Copter-4.5.1",
+      "wafTarget": "copter",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Copter-4.5.1-linux-arm64.tar.gz",
+          "sha256": "465ce60f13cabee3a6abcd1c71d115cd12d783de80a56c29776884f16b148824",
+          "executable": "bin/ArduCopter"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Copter-4.5.1-linux-x64.tar.gz",
+          "sha256": "d4ea04cf2dbfbf5a25ebd7a5e8ad04769dd31389a630db4e46a3c80174ae8ed5",
+          "executable": "bin/ArduCopter"
+        }
+      }
+    },
+    {
+      "vehicle": "copter",
+      "version": "4.5.4",
+      "ardupilotTag": "Copter-4.5.4",
+      "ardupilotReleasedAt": "2024-06-14",
+      "ourReleaseTag": "Copter-4.5.4",
+      "wafTarget": "copter",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Copter-4.5.4-linux-arm64.tar.gz",
+          "sha256": "c471578633a2a0d1cef07d67f06716ea07b8c1a3f927503999a55670337ac8e5",
+          "executable": "bin/ArduCopter"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Copter-4.5.4-linux-x64.tar.gz",
+          "sha256": "cbb4fd7c6ce0a286305f374ed00ceed0fe36146691b8e5dfda008d493982880d",
+          "executable": "bin/ArduCopter"
+        }
+      }
+    },
+    {
+      "vehicle": "copter",
+      "version": "4.5.6",
+      "ardupilotTag": "Copter-4.5.6",
+      "ardupilotReleasedAt": "2024-09-03",
+      "ourReleaseTag": "Copter-4.5.6",
+      "wafTarget": "copter",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Copter-4.5.6-linux-arm64.tar.gz",
+          "sha256": "fd7d2a59c3fee609138f8dfa1cbda2e7618b50e76027765b50fd9765d44ef230",
+          "executable": "bin/ArduCopter"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Copter-4.5.6-linux-x64.tar.gz",
+          "sha256": "9e8670960a7cc42ec08d67b00a2b8fb8a70477cf6d04808605a1b6d2afed3c54",
+          "executable": "bin/ArduCopter"
+        }
+      }
+    },
+    {
+      "vehicle": "copter",
+      "version": "4.5.0",
+      "ardupilotTag": "Copter-4.5.0",
+      "ardupilotReleasedAt": "2024-04-02",
+      "ourReleaseTag": "Copter-4.5.0",
+      "wafTarget": "copter",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Copter-4.5.0-linux-arm64.tar.gz",
+          "sha256": "f8759e224aecddb2dd6a47adee16b679594ccef2d0f5cd44bcfb9ea05b39e2c8",
+          "executable": "bin/ArduCopter"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Copter-4.5.0-linux-x64.tar.gz",
+          "sha256": "000d54d1a773a940a819787d2851347b6c4184a2edf6325c38ec3175da1c2624",
+          "executable": "bin/ArduCopter"
+        }
+      }
+    },
+    {
+      "vehicle": "copter",
+      "version": "4.6.1",
+      "ardupilotTag": "Copter-4.6.1",
+      "ardupilotReleasedAt": "2025-06-19",
+      "ourReleaseTag": "Copter-4.6.1",
+      "wafTarget": "copter",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Copter-4.6.1-linux-arm64.tar.gz",
+          "sha256": "af2f91cba4c35b63f4cf6af7d60eb885dcf8c6670ba8e72306854aaea2f28fdc",
+          "executable": "bin/ArduCopter"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Copter-4.6.1-linux-x64.tar.gz",
+          "sha256": "caf73bc3e8b2d8765dc47bb39c87252231e3d044c89a47b603b22e1c0f148904",
+          "executable": "bin/ArduCopter"
+        }
+      }
+    },
+    {
+      "vehicle": "copter",
+      "version": "4.6.2",
+      "ardupilotTag": "Copter-4.6.2",
+      "ardupilotReleasedAt": "2025-07-17",
+      "ourReleaseTag": "Copter-4.6.2",
+      "wafTarget": "copter",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Copter-4.6.2-linux-arm64.tar.gz",
+          "sha256": "377ef00f4c9a0818afe5018de0825d800b898cf9cf7b40b3b05bc29027893bf6",
+          "executable": "bin/ArduCopter"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Copter-4.6.2-linux-x64.tar.gz",
+          "sha256": "7d960a00e05f80af04cad4f087bedfbaff47e0fba74bbd4fd01c42a8b7887e46",
+          "executable": "bin/ArduCopter"
+        }
+      }
+    },
+    {
+      "vehicle": "copter",
+      "version": "4.5.7",
+      "ardupilotTag": "Copter-4.5.7",
+      "ardupilotReleasedAt": "2024-10-14",
+      "ourReleaseTag": "Copter-4.5.7",
+      "wafTarget": "copter",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Copter-4.5.7-linux-arm64.tar.gz",
+          "sha256": "4c4c42bd45db04dd72e652b3914dd070989cc000d70cbdc52b72527f0bb72a96",
+          "executable": "bin/ArduCopter"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Copter-4.5.7-linux-x64.tar.gz",
+          "sha256": "be61bf19bb001d90332f23358b8ed2369bb488098bc5615f576d56346f9e8c25",
+          "executable": "bin/ArduCopter"
+        }
+      }
+    },
+    {
+      "vehicle": "copter",
+      "version": "4.5.5",
+      "ardupilotTag": "Copter-4.5.5",
+      "ardupilotReleasedAt": "2024-08-01",
+      "ourReleaseTag": "Copter-4.5.5",
+      "wafTarget": "copter",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Copter-4.5.5-linux-arm64.tar.gz",
+          "sha256": "834aace99e4f4837403f82602fbddd8ba8b1cce9106d4be62d41c2baf87a5acb",
+          "executable": "bin/ArduCopter"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Copter-4.5.5-linux-x64.tar.gz",
+          "sha256": "56e55df68330ba0a1f231cd7c3c64359cde10eb98899be1085c7c76edd4ac6f1",
+          "executable": "bin/ArduCopter"
+        }
+      }
+    },
+    {
+      "vehicle": "sub",
+      "version": "4.5.5",
+      "ardupilotTag": "ArduSub-4.5.5",
+      "ardupilotReleasedAt": "2025-08-18",
+      "ourReleaseTag": "ArduSub-4.5.5",
+      "wafTarget": "sub",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.5-linux-arm64.tar.gz",
+          "sha256": "5f55d87dd8ea731a24cea642ad860017ca84a51504547990f7b891090e9f9e7e",
+          "executable": "bin/ArduSub"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.5-linux-x64.tar.gz",
+          "sha256": "8a077e1ffa7855f306a5d6833b3f816f9c5da11c7e5a7eea0df883328834e158",
+          "executable": "bin/ArduSub"
+        }
+      }
+    },
+    {
+      "vehicle": "copter",
+      "version": "4.5.2",
+      "ardupilotTag": "Copter-4.5.2",
+      "ardupilotReleasedAt": "2024-05-14",
+      "ourReleaseTag": "Copter-4.5.2",
+      "wafTarget": "copter",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Copter-4.5.2-linux-arm64.tar.gz",
+          "sha256": "3abe712ad1d6943f8085938265db4e62ece27422ffedacef50735b96e267f6cc",
+          "executable": "bin/ArduCopter"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Copter-4.5.2-linux-x64.tar.gz",
+          "sha256": "91dc0ca70b1e4e82653dfb69519c7e59168510f3e9065aa38be957f3abf4af90",
+          "executable": "bin/ArduCopter"
+        }
+      }
+    },
+    {
+      "vehicle": "copter",
+      "version": "4.5.3",
+      "ardupilotTag": "Copter-4.5.3",
+      "ardupilotReleasedAt": "2024-05-28",
+      "ourReleaseTag": "Copter-4.5.3",
+      "wafTarget": "copter",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Copter-4.5.3-linux-arm64.tar.gz",
+          "sha256": "43efb5a17569207def3df8e2ea5f4e8658b5ac3008b1d45f12b3b5864f26fd49",
+          "executable": "bin/ArduCopter"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Copter-4.5.3-linux-x64.tar.gz",
+          "sha256": "ec85c0630895720df7c5c3af234512cda8cb5c9c870e7cdbcf3f9b3eae2f1187",
+          "executable": "bin/ArduCopter"
+        }
+      }
+    },
+    {
+      "vehicle": "sub",
+      "version": "4.5.6",
+      "ardupilotTag": "ArduSub-4.5.6",
+      "ardupilotReleasedAt": "2025-09-16",
+      "ourReleaseTag": "ArduSub-4.5.6",
+      "wafTarget": "sub",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.6-linux-arm64.tar.gz",
+          "sha256": "848f49fca578dba3ec47e330b682d4b6e0c53d532d868d7b0609b2724e85dce4",
+          "executable": "bin/ArduSub"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.6-linux-x64.tar.gz",
+          "sha256": "f03a67f2879c9477d82d86ceda259f92030d3357a4a7c196d26eeecf155a66c0",
+          "executable": "bin/ArduSub"
+        }
+      }
+    },
+    {
+      "vehicle": "copter",
+      "version": "4.6.0",
+      "ardupilotTag": "Copter-4.6.0",
+      "ardupilotReleasedAt": "2025-05-21",
+      "ourReleaseTag": "Copter-4.6.0",
+      "wafTarget": "copter",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Copter-4.6.0-linux-arm64.tar.gz",
+          "sha256": "e75147890a87d693e33b88b470aa1da5b4d27fa243a1d10160eeca141d0c9fd6",
+          "executable": "bin/ArduCopter"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Copter-4.6.0-linux-x64.tar.gz",
+          "sha256": "1d1edde14145ae058d994a8374ec9845673229575411625ef74ee7a1c6cc539c",
+          "executable": "bin/ArduCopter"
+        }
+      }
+    },
+    {
+      "vehicle": "plane",
+      "version": "4.5.0",
+      "ardupilotTag": "Plane-4.5.0",
+      "ardupilotReleasedAt": "2024-04-02",
+      "ourReleaseTag": "Plane-4.5.0",
+      "wafTarget": "plane",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Plane-4.5.0-linux-arm64.tar.gz",
+          "sha256": "c9289cdc5ce2b0f56072873f7dc2c9fb5497c431e5d6f5c88b85c4608469fb0d",
+          "executable": "bin/ArduPlane"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.0-linux-x64.tar.gz",
+          "sha256": "1e64d103891c6f548301d49aafad0bbc292a17992b565b675f805711717408f8",
+          "executable": "bin/ArduPlane"
+        }
+      }
+    },
+    {
+      "vehicle": "sub",
+      "version": "4.5.7",
+      "ardupilotTag": "ArduSub-4.5.7",
+      "ardupilotReleasedAt": "2025-12-17",
+      "ourReleaseTag": "ArduSub-4.5.7",
+      "wafTarget": "sub",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.7-linux-arm64.tar.gz",
+          "sha256": "d4b314e063096a701885f6aaa5fc49d1fdc515224ab5dee18537897878fad416",
+          "executable": "bin/ArduSub"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.7-linux-x64.tar.gz",
+          "sha256": "bc8f884528024f32dcc2da69bc65e91d3d9800534b3d3b1e0a8a29e8f07e3108",
+          "executable": "bin/ArduSub"
+        }
+      }
+    },
+    {
+      "vehicle": "sub",
+      "version": "4.5.3",
+      "ardupilotTag": "ArduSub-4.5.3",
+      "ardupilotReleasedAt": "2025-03-18",
+      "ourReleaseTag": "ArduSub-4.5.3",
+      "wafTarget": "sub",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.3-linux-arm64.tar.gz",
+          "sha256": "a0a0a34ff4d1e6118bb8521037f1655ebf872c6a782f43a0bd97863dfc35b12e",
+          "executable": "bin/ArduSub"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.3-linux-x64.tar.gz",
+          "sha256": "787ee2e54c25d31e681ee0b5b0f38b2c9427185420451ce7ed35501b9692ff4f",
+          "executable": "bin/ArduSub"
+        }
+      }
+    },
+    {
+      "vehicle": "sub",
+      "version": "4.5.0",
+      "ardupilotTag": "ArduSub-4.5.0",
+      "ardupilotReleasedAt": "2024-09-26",
+      "ourReleaseTag": "ArduSub-4.5.0",
+      "wafTarget": "sub",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.0-linux-arm64.tar.gz",
+          "sha256": "4d43d519fc32b7d46a3d3df893ba5328fb19ea0e11c1b9c42f05f6d383b9d442",
+          "executable": "bin/ArduSub"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.0-linux-x64.tar.gz",
+          "sha256": "ab0221dfb437a3756afd01b02de68ae448a602d27d6bcc376b0d6f93b0f38caf",
+          "executable": "bin/ArduSub"
+        }
+      }
+    },
+    {
+      "vehicle": "sub",
+      "version": "4.5.1",
+      "ardupilotTag": "ArduSub-4.5.1",
+      "ardupilotReleasedAt": "2025-01-10",
+      "ourReleaseTag": "ArduSub-4.5.1",
+      "wafTarget": "sub",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.1-linux-arm64.tar.gz",
+          "sha256": "b18e45ab4412779b66d6292fea80f4feef0aaf4776a634368649bbd54fe65209",
+          "executable": "bin/ArduSub"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.1-linux-x64.tar.gz",
+          "sha256": "885773ba10b16cd8e247efc34f5865e9906a5a4467329de1df949d932580ac11",
+          "executable": "bin/ArduSub"
+        }
+      }
+    },
     {
       "vehicle": "copter",
       "version": "4.6.3",
