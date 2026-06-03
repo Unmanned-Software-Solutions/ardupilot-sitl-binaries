@@ -47,8 +47,9 @@ jobs:
           # which gates manifest publication for everyone else. Keep it in the matrix
           # so we build when a runner is available, but don't let it block.
           - { os: macos-13,            platform: macos-x64,   ext: tar.gz, continue: true  }
-          # Windows is not yet validated end-to-end; keep it non-blocking until the
-          # Cygwin/MSYS2 toolchain wiring lands.
+          # Windows builds under Cygwin (see the Windows steps below). Kept
+          # non-blocking until the first green backfill run confirms the toolchain;
+          # flip `continue` to false once validated so regressions surface.
           - { os: windows-2022,        platform: windows-x64, ext: zip,    continue: true  }
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.continue }}
@@ -116,23 +117,53 @@ jobs:
 
       - name: Install build deps (Windows / Cygwin)
         if: startsWith(matrix.os, 'windows') && steps.skip.outputs.skip != 'true'
-        # ArduPilot's Windows SITL build path is Cygwin — see ArduPilot's own
-        # Tools/scripts/build_ci.sh for the canonical script that Mission Planner uses.
+        # ArduPilot's Windows SITL build path is Cygwin — this mirrors the package
+        # set and gcc pin from ArduPilot's own .github/workflows/cygwin_build.yml,
+        # the workflow that produces the Mission Planner SITL exes. add-to-path is
+        # left off so the Cygwin toolchain doesn't shadow the runner's native git.
+        uses: cygwin/cygwin-install-action@v5
+        with:
+          packages: >-
+            cygwin64 gcc-g++=10.2.0-1 python37 python37-future python37-lxml
+            python37-pip python37-setuptools python37-wheel git procps gettext
+            zip unzip
+          add-to-path: false
+
+      - name: Prepare Cygwin Python (Windows)
+        if: startsWith(matrix.os, 'windows') && steps.skip.outputs.skip != 'true'
+        # python37 is the highest Cygwin python ArduPilot validates against. empy is
+        # pinned to 3.3.4 (4.x dropped the `@)` markup the dronecan generator uses)
+        # and pexpect is imported by waf's bin-embed step — same pins as the Linux
+        # and macOS legs above.
+        shell: C:\cygwin\bin\bash.exe -eo pipefail '{0}'
         run: |
-          choco install -y cygwin cyg-get
-          cyg-get python3 python3-future python3-lxml git gcc-g++ make ccache libtool autoconf automake
-          # Further wiring (PATH, GCC selection, etc.) goes here — placeholder until validated.
-        shell: pwsh
+          export PATH="/usr/bin:$(cygpath "${SYSTEMROOT}")/system32"
+          ln -sf /usr/bin/python3.7 /usr/bin/python
+          ln -sf /usr/bin/pip3.7 /usr/bin/pip
+          python -m pip install --progress-bar off 'empy==3.3.4' pexpect
+          python -m pip install --progress-bar off dronecan --upgrade
 
-      - name: Build SITL
-        if: steps.skip.outputs.skip != 'true'
+      - name: Build & package SITL (Unix)
+        if: ${{ steps.skip.outputs.skip != 'true' && !startsWith(matrix.os, 'windows') }}
         shell: bash
-        run: bash scripts/build_one.sh "${{ inputs.vehicle }}" "${{ inputs.ardupilot_tag }}" "${{ matrix.platform }}"
+        run: |
+          bash scripts/build_one.sh "${{ inputs.vehicle }}" "${{ inputs.ardupilot_tag }}" "${{ matrix.platform }}"
+          bash scripts/package_one.sh "${{ inputs.vehicle }}" "${{ inputs.ardupilot_tag }}" "${{ matrix.platform }}" "${{ matrix.ext }}"
 
-      - name: Package archive
-        if: steps.skip.outputs.skip != 'true'
-        shell: bash
-        run: bash scripts/package_one.sh "${{ inputs.vehicle }}" "${{ inputs.ardupilot_tag }}" "${{ matrix.platform }}" "${{ matrix.ext }}"
+      - name: Build & package SITL (Windows / Cygwin)
+        if: ${{ steps.skip.outputs.skip != 'true' && startsWith(matrix.os, 'windows') }}
+        # Must run under Cygwin's bash (not the runner's Git bash) so waf picks up the
+        # cygwin python/g++ toolchain. safe.directory is needed because the tree was
+        # checked out by the runner's native git but is now read by Cygwin git.
+        shell: C:\cygwin\bin\bash.exe -eo pipefail '{0}'
+        run: |
+          export PATH="/usr/local/bin:/usr/bin:$(cygpath "${SYSTEMROOT}")/system32"
+          ws="$(cygpath -u "$GITHUB_WORKSPACE")"
+          git config --global --add safe.directory "$ws"
+          git config --global --add safe.directory "$ws/ardupilot"
+          cd "$ws"
+          bash scripts/build_one.sh "${{ inputs.vehicle }}" "${{ inputs.ardupilot_tag }}" "${{ matrix.platform }}"
+          bash scripts/package_one.sh "${{ inputs.vehicle }}" "${{ inputs.ardupilot_tag }}" "${{ matrix.platform }}" "${{ matrix.ext }}"
 
       - name: Upload to GitHub Release
         if: steps.skip.outputs.skip != 'true'
@@ -145,5 +176,5 @@ jobs:
             dist/ardupilot-sitl-${{ inputs.ardupilot_tag }}-${{ matrix.platform }}.${{ matrix.ext }}.sha256
 
 # Manifest regeneration is its own workflow (`update-manifest.yml`) triggered on
-# `release: published`. Decoupling avoids waiting on slow runners (macos-13 queues
-# for hours, windows is still placeholder) to publish the manifest for the rest.
+# `release: published`. Decoupling avoids waiting on slow runners (macos-13 and the
+# Cygwin windows leg both queue/build slowly) to publish the manifest for the rest.
