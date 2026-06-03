@@ -141,6 +141,10 @@ jobs:
         # generator uses) and pexpect is imported by waf's bin-embed step — same
         # pins as the Linux and macOS legs. future/lxml come from the cygwin
         # packages above. Using `python -m pip` avoids needing a pip symlink.
+        # SHELLOPTS=igncr: the runner writes step scripts with CRLF and real
+        # Cygwin bash (unlike Git bash) chokes on the \r; igncr makes it ignore them.
+        env:
+          SHELLOPTS: igncr
         shell: C:\cygwin\bin\bash.exe -eo pipefail '{0}'
         run: |
           export PATH="/usr/bin:$(cygpath "${SYSTEMROOT}")/system32"
@@ -161,6 +165,10 @@ jobs:
         # Must run under Cygwin's bash (not the runner's Git bash) so waf picks up the
         # cygwin python/g++ toolchain. safe.directory is needed because the tree was
         # checked out by the runner's native git but is now read by Cygwin git.
+        # SHELLOPTS=igncr makes Cygwin bash tolerate the CRLF the runner writes into
+        # both this script and the bash-invoked scripts/*.sh (inherited via env).
+        env:
+          SHELLOPTS: igncr
         shell: C:\cygwin\bin\bash.exe -eo pipefail '{0}'
         run: |
           export PATH="/usr/local/bin:/usr/bin:$(cygpath "${SYSTEMROOT}")/system32"
