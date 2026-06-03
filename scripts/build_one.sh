@@ -49,7 +49,13 @@ if [[ "$platform" == windows-* ]]; then
   # path ArduPilot uses for the Mission Planner SITL exes (Tools/scripts/cygwin_build.sh).
   # waf must be invoked through `python` (the cygwin python alias) and pointed at
   # the cygwin cross-target so the linker emits a PE executable.
-  python ./waf configure --board sitl --toolchain x86_64-pc-cygwin
+  #
+  # --no-submodule-update: the submodules were already populated by actions/checkout.
+  # Windows git wrote the submodule .git gitdir pointers as Windows paths (D:/a/...),
+  # which Cygwin git can't resolve, so waf's `git submodule status` task aborts the
+  # build. Disabling waf's submodule management sidesteps that — the sources are
+  # already on disk, waf just shouldn't try to git-manage them.
+  python ./waf configure --board sitl --toolchain x86_64-pc-cygwin --no-submodule-update
   python ./waf "$waf_target" -j8
 else
   ./waf configure --board sitl
