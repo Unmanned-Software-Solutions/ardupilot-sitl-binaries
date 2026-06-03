@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-03T09:55:02Z",
+  "updatedAt": "2026-06-03T14:03:22Z",
   "stable": {
     "tracker": "4.6.3",
     "rover": "4.6.3",
@@ -31,6 +31,11 @@
           "asset": "ardupilot-sitl-Tracker-4.6.2-macos-arm64.tar.gz",
           "sha256": "02f84c750144dac75c66ababdf4b94544b67f1fc640d39f9ed5986110426c36f",
           "executable": "bin/AntennaTracker"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.6.2-windows-x64.zip",
+          "sha256": "0dbcbf9571f3d9ec076a665c1f7747aba5c2929ef0d5d5f583e2bfa411139c2e",
+          "executable": "bin/AntennaTracker.exe"
         }
       }
     },
@@ -56,6 +61,11 @@
           "asset": "ardupilot-sitl-Tracker-4.6.0-macos-arm64.tar.gz",
           "sha256": "3cf7952e75f1e84b1f7f05a113fd0217ca10bd261d3dc81e9ddfdf394fc2dbf5",
           "executable": "bin/AntennaTracker"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.6.0-windows-x64.zip",
+          "sha256": "595661711ec004ef2047d35edef09f51c3584cdec25163f09733c5b0622ee7a3",
+          "executable": "bin/AntennaTracker.exe"
         }
       }
     },
@@ -81,6 +91,11 @@
           "asset": "ardupilot-sitl-Tracker-4.6.1-macos-arm64.tar.gz",
           "sha256": "974c12fd372285a3b088051ec6236910add505344cfdb5d39381a877db384fd5",
           "executable": "bin/AntennaTracker"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.6.1-windows-x64.zip",
+          "sha256": "bb2899388dc792f93ba7a57e94026d0cf2ea9c0f6a46efbbf9def2363b9ed4eb",
+          "executable": "bin/AntennaTracker.exe"
         }
       }
     },
@@ -106,6 +121,11 @@
           "asset": "ardupilot-sitl-Tracker-4.6.3-macos-arm64.tar.gz",
           "sha256": "74a5e378c05fdacf7fb79fe0a81df5e0b0eb718c4e244109371b4058b6b57079",
           "executable": "bin/AntennaTracker"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.6.3-windows-x64.zip",
+          "sha256": "3e7d5f09d4fa7bc4342a24239f7d842ac6db2f11dac8c03c247a7fd0ddcd07ea",
+          "executable": "bin/AntennaTracker.exe"
         }
       }
     },
@@ -131,6 +151,11 @@
           "asset": "ardupilot-sitl-Tracker-4.5.6-macos-arm64.tar.gz",
           "sha256": "f681c89d230cddbb5387fa3b30022ea81a678074c7c77407521b8729a3c9f642",
           "executable": "bin/AntennaTracker"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.6-windows-x64.zip",
+          "sha256": "c4e16517a359ff752c851c69b8b1ba78bd89ec1f53786f626be13f7018a52d38",
+          "executable": "bin/AntennaTracker.exe"
         }
       }
     },
@@ -156,6 +181,11 @@
           "asset": "ardupilot-sitl-Tracker-4.5.7-macos-arm64.tar.gz",
           "sha256": "daf98a78db7ff601353ee4b868227c96a3eeb93fc2597b86ff9d6e7bb7eb0a93",
           "executable": "bin/AntennaTracker"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.7-windows-x64.zip",
+          "sha256": "1b07421400eea738c337bca9974296515c6b2724ecd33abde9ee0629572837f8",
+          "executable": "bin/AntennaTracker.exe"
         }
       }
     },
@@ -181,6 +211,11 @@
           "asset": "ardupilot-sitl-Tracker-4.5.5-macos-arm64.tar.gz",
           "sha256": "f7b69a5797bbf9b22d991cb5980637090617cc35e7260e9b0f73d25559f2cdd2",
           "executable": "bin/AntennaTracker"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.5-windows-x64.zip",
+          "sha256": "914a212b562260d1264637e14cf0e09febe11ad3e270a0ec039da61678ac29be",
+          "executable": "bin/AntennaTracker.exe"
         }
       }
     },
@@ -206,6 +241,11 @@
           "asset": "ardupilot-sitl-Tracker-4.5.2-macos-arm64.tar.gz",
           "sha256": "98cfd88df3317c83ab7615f4f23d7452dc77f0f7c90cac87cc31060ab2843060",
           "executable": "bin/AntennaTracker"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.2-windows-x64.zip",
+          "sha256": "003c611608a1b8739a37cee2d6b46106f86fab40cd3fa7497884cda7a70d6ab7",
+          "executable": "bin/AntennaTracker.exe"
         }
       }
     },
@@ -381,6 +421,11 @@
           "asset": "ardupilot-sitl-Plane-4.6.3-macos-arm64.tar.gz",
           "sha256": "bd888db25b65c378408cad68668a365324bfc169e654ccc064b9cc6feb65c80b",
           "executable": "bin/ArduPlane"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Plane-4.6.3-windows-x64.zip",
+          "sha256": "287d1efdcc5462c3b794c30ae8c94435ae379f0e696932cf23db203a958041ee",
+          "executable": "bin/ArduPlane.exe"
         }
       }
     },
@@ -1356,6 +1401,11 @@
           "asset": "ardupilot-sitl-Copter-4.6.3-macos-arm64.tar.gz",
           "sha256": "c34f6b32b662d9661d09a4d8afa099eb697a0e1406a01b0bb3a61bd7886132e7",
           "executable": "bin/ArduCopter"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Copter-4.6.3-windows-x64.zip",
+          "sha256": "6a3a0cc3f24004aa06bea6940af4580b7cc353e8585089726cde3e4c8dde35b1",
+          "executable": "bin/ArduCopter.exe"
         }
       }
     }
