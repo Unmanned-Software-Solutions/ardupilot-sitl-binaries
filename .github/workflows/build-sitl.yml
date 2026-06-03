@@ -173,8 +173,11 @@ jobs:
         run: |
           export PATH="/usr/local/bin:/usr/bin:$(cygpath "${SYSTEMROOT}")/system32"
           ws="$(cygpath -u "$GITHUB_WORKSPACE")"
-          git config --global --add safe.directory "$ws"
-          git config --global --add safe.directory "$ws/ardupilot"
+          # The tree was checked out by the runner's native git; Cygwin git sees a
+          # different owner and trips its dubious-ownership guard. waf runs
+          # `git submodule status --recursive` during the build, so the guard must be
+          # lifted for ardupilot AND every submodule — the `*` wildcard covers all.
+          git config --global --add safe.directory '*'
           cd "$ws"
           bash scripts/build_one.sh "${{ inputs.vehicle }}" "${{ inputs.ardupilot_tag }}" "${{ matrix.platform }}"
           bash scripts/package_one.sh "${{ inputs.vehicle }}" "${{ inputs.ardupilot_tag }}" "${{ matrix.platform }}" "${{ matrix.ext }}"
