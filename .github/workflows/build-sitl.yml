@@ -117,29 +117,34 @@ jobs:
 
       - name: Install build deps (Windows / Cygwin)
         if: startsWith(matrix.os, 'windows') && steps.skip.outputs.skip != 'true'
-        # ArduPilot's Windows SITL build path is Cygwin — this mirrors the package
-        # set and gcc pin from ArduPilot's own .github/workflows/cygwin_build.yml,
-        # the workflow that produces the Mission Planner SITL exes. add-to-path is
-        # left off so the Cygwin toolchain doesn't shadow the runner's native git.
-        uses: cygwin/cygwin-install-action@v5
+        # Cygwin is ArduPilot's own Windows SITL toolchain (see ArduPilot's
+        # .github/workflows/cygwin_build.yml). Pinned to v6.1: v5 crashed on the
+        # current windows-2022 image — it fetched cygwin.com/sha512.sum with
+        # Invoke-WebRequest sans -UseBasicParsing and PowerShell 5.1's legacy IE
+        # parser threw NullReferenceException. v6.1 downloads the hash to a file.
+        # Package set follows ArduPilot's, but on python39 (the current mirror
+        # dropped python37, and 3.9 still ships distutils + cygwin -future/-lxml,
+        # unlike 3.12). No gcc version pin — current gcc-g++ (13.x) builds fine
+        # because the default SITL config doesn't enable -Werror.
+        uses: cygwin/cygwin-install-action@v6.1
         with:
           packages: >-
-            cygwin64 gcc-g++=10.2.0-1 python37 python37-future python37-lxml
-            python37-pip python37-setuptools python37-wheel git procps gettext
+            gcc-g++ python39 python39-devel python39-pip python39-setuptools
+            python39-wheel python39-future python39-lxml git procps gettext
             zip unzip
           add-to-path: false
 
       - name: Prepare Cygwin Python (Windows)
         if: startsWith(matrix.os, 'windows') && steps.skip.outputs.skip != 'true'
-        # python37 is the highest Cygwin python ArduPilot validates against. empy is
-        # pinned to 3.3.4 (4.x dropped the `@)` markup the dronecan generator uses)
-        # and pexpect is imported by waf's bin-embed step — same pins as the Linux
-        # and macOS legs above.
+        # waf is invoked as `python ./waf`, so python3.9 must answer to `python`.
+        # empy is pinned to 3.3.4 (4.x dropped the `@)` markup the dronecan
+        # generator uses) and pexpect is imported by waf's bin-embed step — same
+        # pins as the Linux and macOS legs. future/lxml come from the cygwin
+        # packages above. Using `python -m pip` avoids needing a pip symlink.
         shell: C:\cygwin\bin\bash.exe -eo pipefail '{0}'
         run: |
           export PATH="/usr/bin:$(cygpath "${SYSTEMROOT}")/system32"
-          ln -sf /usr/bin/python3.7 /usr/bin/python
-          ln -sf /usr/bin/pip3.7 /usr/bin/pip
+          ln -sf /usr/bin/python3.9 /usr/bin/python
           python -m pip install --progress-bar off 'empy==3.3.4' pexpect
           python -m pip install --progress-bar off dronecan --upgrade
 
