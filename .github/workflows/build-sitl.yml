@@ -130,7 +130,7 @@ jobs:
         with:
           packages: >-
             gcc-g++ python39 python39-devel python39-pip python39-setuptools
-            python39-wheel python39-future python39-lxml git procps gettext
+            python39-wheel python39-future python39-lxml git procps-ng gettext
             zip unzip
           add-to-path: false
 
@@ -145,8 +145,9 @@ jobs:
         run: |
           export PATH="/usr/bin:$(cygpath "${SYSTEMROOT}")/system32"
           ln -sf /usr/bin/python3.9 /usr/bin/python
-          python -m pip install --progress-bar off 'empy==3.3.4' pexpect
-          python -m pip install --progress-bar off dronecan --upgrade
+          # One install, no --upgrade: these aren't pre-installed on a fresh Cygwin,
+          # and Cygwin's pip (v26) rejects --upgrade here.
+          python -m pip install --progress-bar off 'empy==3.3.4' pexpect dronecan
 
       - name: Build & package SITL (Unix)
         if: ${{ steps.skip.outputs.skip != 'true' && !startsWith(matrix.os, 'windows') }}
