@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-03T17:58:23Z",
+  "updatedAt": "2026-06-03T21:24:23Z",
   "stable": {
     "tracker": "4.6.3",
     "rover": "4.6.3",
@@ -511,6 +511,11 @@
           "asset": "ardupilot-sitl-Plane-4.6.0-macos-arm64.tar.gz",
           "sha256": "06f587ace1b0b1cfdac21ec0919b2a5bc6e3c7f695796912a5548a1a3ef3ddc2",
           "executable": "bin/ArduPlane"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Plane-4.6.0-windows-x64.zip",
+          "sha256": "b884613c5c5af1111de5cd2b266401427b439c6296f3991dce49ca96355af853",
+          "executable": "bin/ArduPlane.exe"
         }
       }
     },
@@ -586,6 +591,11 @@
           "asset": "ardupilot-sitl-Rover-4.5.2-macos-arm64.tar.gz",
           "sha256": "b6ad5cfe51180d3aba56774ed68fd106f921697280d1c0fba829dcd195058d7f",
           "executable": "bin/ArduRover"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Rover-4.5.2-windows-x64.zip",
+          "sha256": "1871d6d8ac37db22d3fe3951c294c416aa413c56b98ccca233d37c2b1a4e362a",
+          "executable": "bin/ArduRover.exe"
         }
       }
     },
@@ -636,6 +646,11 @@
           "asset": "ardupilot-sitl-Rover-4.5.3-macos-arm64.tar.gz",
           "sha256": "5b5b50a0debfdc8c7122666d523ffcf2e2f2d149831d420de620c048a2a9aaa8",
           "executable": "bin/ArduRover"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Rover-4.5.3-windows-x64.zip",
+          "sha256": "a915a0d3af15e2a4075cd0bb31065194f17548ceb7bdd83189d12a66b5db4571",
+          "executable": "bin/ArduRover.exe"
         }
       }
     },
@@ -661,6 +676,11 @@
           "asset": "ardupilot-sitl-Rover-4.5.1-macos-arm64.tar.gz",
           "sha256": "5effe73473e8727f4c28794fa46ab13f852c2ed3a14cbecf09edc4b5f334a088",
           "executable": "bin/ArduRover"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Rover-4.5.1-windows-x64.zip",
+          "sha256": "5274e9205caf07d8e1ad3de4d90cb409168560a748f5ae05d589bf1924c53da1",
+          "executable": "bin/ArduRover.exe"
         }
       }
     },
@@ -686,6 +706,11 @@
           "asset": "ardupilot-sitl-Plane-4.6.1-macos-arm64.tar.gz",
           "sha256": "d62e79ad2cc120c1fda3b7400d332b8358f850bb09c62a3e99ec90bb890e9b68",
           "executable": "bin/ArduPlane"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Plane-4.6.1-windows-x64.zip",
+          "sha256": "bf77476e0d508ad3027dc2f343c9a8e3028f8b87c0e89c7d931a86719a31fbfe",
+          "executable": "bin/ArduPlane.exe"
         }
       }
     },
@@ -711,6 +736,11 @@
           "asset": "ardupilot-sitl-Rover-4.5.4-macos-arm64.tar.gz",
           "sha256": "d3f0c126d2c1ceee83f548dd88536594e6fef5a4ebfffb26ec52be4d097fd84a",
           "executable": "bin/ArduRover"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Rover-4.5.4-windows-x64.zip",
+          "sha256": "4fa004ca12fc723f65fafe34653176fa84fa429290ec07cb8425615397dc87cb",
+          "executable": "bin/ArduRover.exe"
         }
       }
     },
@@ -736,6 +766,11 @@
           "asset": "ardupilot-sitl-Plane-4.6.2-macos-arm64.tar.gz",
           "sha256": "8006e6a132d7dbee2e5c8fe9a58a0d4c4d3274030036aacd3abbd9ed4520e2be",
           "executable": "bin/ArduPlane"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Plane-4.6.2-windows-x64.zip",
+          "sha256": "efe5ba9c7a4f6950606bc2fbebd05a512acb27b38db591e624bb6872f9e61020",
+          "executable": "bin/ArduPlane.exe"
         }
       }
     },
@@ -761,6 +796,11 @@
           "asset": "ardupilot-sitl-Rover-4.5.0-macos-arm64.tar.gz",
           "sha256": "c81b898ad61a1d37b918f16c8ae45f7836646da0b391f1a6e7128d8174aa0226",
           "executable": "bin/ArduRover"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Rover-4.5.0-windows-x64.zip",
+          "sha256": "119b5de401ac1a83aaf3a835f1f389129e285e2fe3951caf7781a58da1cc43b5",
+          "executable": "bin/ArduRover.exe"
         }
       }
     },
@@ -786,6 +826,11 @@
           "asset": "ardupilot-sitl-Plane-4.5.7-macos-arm64.tar.gz",
           "sha256": "54d52efe1430420f7538d8f0d0a70f0bce3a56f7dbeed6cc1e235211f4c2b326",
           "executable": "bin/ArduPlane"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.7-windows-x64.zip",
+          "sha256": "44f48ddb7bf1b4890702834507b63bc17bbc9ed7875a05067a648f15405687be",
+          "executable": "bin/ArduPlane.exe"
         }
       }
     },
@@ -811,6 +856,11 @@
           "asset": "ardupilot-sitl-Plane-4.5.5-macos-arm64.tar.gz",
           "sha256": "0048c8a8a725a720b91ec559a9a9915e19907b151807044e06850358ac25b83c",
           "executable": "bin/ArduPlane"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.5-windows-x64.zip",
+          "sha256": "3f0624db303cb2b9ec487bae1cd20e3b945e97b3e4fb8277dcbc1bba4c55343b",
+          "executable": "bin/ArduPlane.exe"
         }
       }
     },
@@ -836,6 +886,11 @@
           "asset": "ardupilot-sitl-Plane-4.5.4-macos-arm64.tar.gz",
           "sha256": "980ce7f6d6300d488c50c821dc6e2322cd525a752e3bd501c0deb806eab3f1a3",
           "executable": "bin/ArduPlane"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.4-windows-x64.zip",
+          "sha256": "e3e0c65788c3e1dba5aa52b3accd6692543658e81fe86fc45a55e782316c2c63",
+          "executable": "bin/ArduPlane.exe"
         }
       }
     },
@@ -861,6 +916,11 @@
           "asset": "ardupilot-sitl-Plane-4.5.3-macos-arm64.tar.gz",
           "sha256": "151427b52293876de6108dd0a5c772e54958bce0cd59649c9141d0d7bb67a80c",
           "executable": "bin/ArduPlane"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.3-windows-x64.zip",
+          "sha256": "82b44c97f78bb2ee82beec09d27262f5e18c89ca11cba3d52c833fba2441b379",
+          "executable": "bin/ArduPlane.exe"
         }
       }
     },
@@ -886,6 +946,11 @@
           "asset": "ardupilot-sitl-Plane-4.5.6-macos-arm64.tar.gz",
           "sha256": "64e2e11d9b821bb2079e9d85429e99a0c06ae7293be5ffe07e5bacf1c94dbf4c",
           "executable": "bin/ArduPlane"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.6-windows-x64.zip",
+          "sha256": "884c762c3a7e25840394e4c24f1f8656898b09241281102511129eff36244b69",
+          "executable": "bin/ArduPlane.exe"
         }
       }
     },
@@ -911,6 +976,11 @@
           "asset": "ardupilot-sitl-Plane-4.5.2-macos-arm64.tar.gz",
           "sha256": "c84affc6dd1a57087e75e1c0c806573f0f0ade07522ebbf5a492fd5293b73b32",
           "executable": "bin/ArduPlane"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.2-windows-x64.zip",
+          "sha256": "324a2f8a68f882a3231f671988a596632f7f10143910cf827efb29ba445da00c",
+          "executable": "bin/ArduPlane.exe"
         }
       }
     },
@@ -936,6 +1006,11 @@
           "asset": "ardupilot-sitl-Plane-4.5.1-macos-arm64.tar.gz",
           "sha256": "b9ddccdc99c87880abafb9540d888f299ac3c094f365240a7744967894d6a42e",
           "executable": "bin/ArduPlane"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.1-windows-x64.zip",
+          "sha256": "1169cb42430c01767f0cc851a84327c116497071d4d41a6529b700db205078cc",
+          "executable": "bin/ArduPlane.exe"
         }
       }
     },
@@ -1081,6 +1156,11 @@
           "asset": "ardupilot-sitl-Copter-4.6.1-macos-arm64.tar.gz",
           "sha256": "b2af23ed74ea35e83595b0c9f5592c9a2ab2625a4f1f868542a50c9fee933802",
           "executable": "bin/ArduCopter"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Copter-4.6.1-windows-x64.zip",
+          "sha256": "79bfde5ecb2187c6b6863a1d0e89b1978092c438e12c42a852d9b7b9d701d926",
+          "executable": "bin/ArduCopter.exe"
         }
       }
     },
@@ -1106,6 +1186,11 @@
           "asset": "ardupilot-sitl-Copter-4.6.2-macos-arm64.tar.gz",
           "sha256": "c8e9e12d8646da739d91690d8cc0bae03fabb599f7eb8517e3b1162ef2873d28",
           "executable": "bin/ArduCopter"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Copter-4.6.2-windows-x64.zip",
+          "sha256": "d2c3cec8a206e2cdb15daf1147ce903ad65606792d7682a08744b8410bc6b020",
+          "executable": "bin/ArduCopter.exe"
         }
       }
     },
@@ -1301,6 +1386,11 @@
           "asset": "ardupilot-sitl-Copter-4.6.0-macos-arm64.tar.gz",
           "sha256": "34c5675caa91276a23b26920300aad3dd7ad78c20bc27bf7c6c54fe210466194",
           "executable": "bin/ArduCopter"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Copter-4.6.0-windows-x64.zip",
+          "sha256": "f73a775e1a987c49cf967f9a84f566e85d4138363d235b62bf77323764190226",
+          "executable": "bin/ArduCopter.exe"
         }
       }
     },
@@ -1326,6 +1416,11 @@
           "asset": "ardupilot-sitl-Plane-4.5.0-macos-arm64.tar.gz",
           "sha256": "6c5a2c168c5ae0bda3abad75d6393250ce73fee717cffa2f3e97f00e77b51877",
           "executable": "bin/ArduPlane"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.0-windows-x64.zip",
+          "sha256": "5f2768c5814d0eab5ce59f38b7295c515536599c08795b4e9629aaf9b018f2db",
+          "executable": "bin/ArduPlane.exe"
         }
       }
     },
