@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-03T21:24:23Z",
+  "updatedAt": "2026-06-04T01:33:01Z",
   "stable": {
     "tracker": "4.6.3",
     "rover": "4.6.3",
@@ -331,6 +331,11 @@
           "asset": "ardupilot-sitl-Tracker-4.5.1-macos-arm64.tar.gz",
           "sha256": "20d8061a1aef643ccbe4eab697d44104fe518640c2402b0a03285344aa0cb378",
           "executable": "bin/AntennaTracker"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.1-windows-x64.zip",
+          "sha256": "ff1ba72ebddac56236e9b6cf4566568593de4faf013fc3d7310f7c0f363abc4b",
+          "executable": "bin/AntennaTracker.exe"
         }
       }
     },
@@ -381,6 +386,11 @@
           "asset": "ardupilot-sitl-Tracker-4.5.0-macos-arm64.tar.gz",
           "sha256": "cdf305551571515b6ea80ab48623f3b0e6ecbe8f09e85241ff266d21b0caaf74",
           "executable": "bin/AntennaTracker"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.0-windows-x64.zip",
+          "sha256": "8533b090d981b3f214316f5150d71c3831367e54026ef94a726b8d34ead615e8",
+          "executable": "bin/AntennaTracker.exe"
         }
       }
     },
@@ -406,6 +416,11 @@
           "asset": "ardupilot-sitl-Rover-4.6.2-macos-arm64.tar.gz",
           "sha256": "3fb9fda5f6283dbfd731077a8533c8fc702f1799c425e9c1b342c52fd50a63e3",
           "executable": "bin/ArduRover"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Rover-4.6.2-windows-x64.zip",
+          "sha256": "92894da90017061e23aaa866c584f7a5adcc1e48ebdcd4192d3e024d0c995672",
+          "executable": "bin/ArduRover.exe"
         }
       }
     },
@@ -461,6 +476,11 @@
           "asset": "ardupilot-sitl-Rover-4.6.0-macos-arm64.tar.gz",
           "sha256": "22279f57eac0c73aeb7521edef0e0be252e61f593cbb5676982c6e57bc1e9c75",
           "executable": "bin/ArduRover"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Rover-4.6.0-windows-x64.zip",
+          "sha256": "2ccba4aa4c48b4768b00bf151f8e154975813c21039d141f76fda22aaefb9a3c",
+          "executable": "bin/ArduRover.exe"
         }
       }
     },
@@ -486,6 +506,11 @@
           "asset": "ardupilot-sitl-Rover-4.5.6-macos-arm64.tar.gz",
           "sha256": "b5f13934be0d58a81bec60240e07172a4cf5739bf23bfddfa151ed9fe87a24e4",
           "executable": "bin/ArduRover"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Rover-4.5.6-windows-x64.zip",
+          "sha256": "1c2e8c9ed33ac96ce18ad12e1be680481a3327b1ecd6b082417400ff35175ad5",
+          "executable": "bin/ArduRover.exe"
         }
       }
     },
@@ -541,6 +566,11 @@
           "asset": "ardupilot-sitl-Rover-4.5.7-macos-arm64.tar.gz",
           "sha256": "914da1e1721f361320527ede98cc4dd0c58cfb3e793f81e5c012394b04fd88b1",
           "executable": "bin/ArduRover"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Rover-4.5.7-windows-x64.zip",
+          "sha256": "58b2a44aea22763a3dc278c52bd70954f2e5a8980cd67c9ef72f5013274bc33e",
+          "executable": "bin/ArduRover.exe"
         }
       }
     },
@@ -566,6 +596,11 @@
           "asset": "ardupilot-sitl-Rover-4.6.1-macos-arm64.tar.gz",
           "sha256": "cb48ba39fc931ea804956d27b1a925056906b69040f8b0d31335373336c3279c",
           "executable": "bin/ArduRover"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Rover-4.6.1-windows-x64.zip",
+          "sha256": "d5877f030fa11816329590db6f73ff35163d55f7f3906ab15a710f5fa3f96ffa",
+          "executable": "bin/ArduRover.exe"
         }
       }
     },
@@ -621,6 +656,11 @@
           "asset": "ardupilot-sitl-Rover-4.5.5-macos-arm64.tar.gz",
           "sha256": "343dc00860b21b1b281cbca91ef1e0c0196fb11b6b7a6300845f08702d3bef6d",
           "executable": "bin/ArduRover"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Rover-4.5.5-windows-x64.zip",
+          "sha256": "c903ef0a50f2255f342bafd0a2469773f734d2ec49dca0a7d2f30f7adeee5ee7",
+          "executable": "bin/ArduRover.exe"
         }
       }
     },
