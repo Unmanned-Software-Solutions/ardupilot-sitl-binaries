@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-04T09:36:55Z",
+  "updatedAt": "2026-06-04T12:49:04Z",
   "stable": {
     "tracker": "4.6.3",
     "rover": "4.6.3",
@@ -34,7 +34,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Tracker-4.6.2-windows-x64.zip",
-          "sha256": "0dbcbf9571f3d9ec076a665c1f7747aba5c2929ef0d5d5f583e2bfa411139c2e",
+          "sha256": "6ebaff8d2172d623c888088f696c601fe3af46d5c85ac61b3f14ccf9b760c176",
           "executable": "bin/AntennaTracker.exe"
         }
       }
@@ -64,7 +64,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Tracker-4.6.0-windows-x64.zip",
-          "sha256": "595661711ec004ef2047d35edef09f51c3584cdec25163f09733c5b0622ee7a3",
+          "sha256": "5b163012043a2041adec2170a497f4d02ed1982acb4f316f3912fc972dc6778e",
           "executable": "bin/AntennaTracker.exe"
         }
       }
@@ -94,7 +94,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Tracker-4.6.1-windows-x64.zip",
-          "sha256": "bb2899388dc792f93ba7a57e94026d0cf2ea9c0f6a46efbbf9def2363b9ed4eb",
+          "sha256": "d90db0225d04f0278b1ac97179c01ff56b888f40a2dbfe49cee01b2956c13d43",
           "executable": "bin/AntennaTracker.exe"
         }
       }
@@ -124,7 +124,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Tracker-4.6.3-windows-x64.zip",
-          "sha256": "3e7d5f09d4fa7bc4342a24239f7d842ac6db2f11dac8c03c247a7fd0ddcd07ea",
+          "sha256": "66feff827b9ad0cf652dd29c9acd7dc595e41adc18f75b00c5ef8b507009fd62",
           "executable": "bin/AntennaTracker.exe"
         }
       }
@@ -154,7 +154,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Tracker-4.5.6-windows-x64.zip",
-          "sha256": "c4e16517a359ff752c851c69b8b1ba78bd89ec1f53786f626be13f7018a52d38",
+          "sha256": "72b62b467c5994f996f729bcd27b8c3c3fef2210611a87f26ec62f56f7aafc2f",
           "executable": "bin/AntennaTracker.exe"
         }
       }
@@ -184,7 +184,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Tracker-4.5.7-windows-x64.zip",
-          "sha256": "1b07421400eea738c337bca9974296515c6b2724ecd33abde9ee0629572837f8",
+          "sha256": "25c3cc552d43caddda6947fb77ec84df8d32ce70f8e50f1d114ff2b2c0fd8ff5",
           "executable": "bin/AntennaTracker.exe"
         }
       }
@@ -214,7 +214,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Tracker-4.5.5-windows-x64.zip",
-          "sha256": "914a212b562260d1264637e14cf0e09febe11ad3e270a0ec039da61678ac29be",
+          "sha256": "7cbead0611242be85262f9af75e3a3fc576367dea822cb137f9623d9653b8cdd",
           "executable": "bin/AntennaTracker.exe"
         }
       }
@@ -244,7 +244,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Tracker-4.5.2-windows-x64.zip",
-          "sha256": "003c611608a1b8739a37cee2d6b46106f86fab40cd3fa7497884cda7a70d6ab7",
+          "sha256": "601a68f5ae551f10e40cb40ef7f9d6e56ac1509d6773eb6237613a0afe27bcaa",
           "executable": "bin/AntennaTracker.exe"
         }
       }
@@ -274,7 +274,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Tracker-4.5.4-windows-x64.zip",
-          "sha256": "2e71ce0b84c62cefbc8f80d34d7a40cab7a25d7389ee0409490599ba2350ddc6",
+          "sha256": "1e05410d62e23535e229879778e2eac4d589474f5b09b2b09564cf04128886e2",
           "executable": "bin/AntennaTracker.exe"
         }
       }
@@ -304,7 +304,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Rover-4.6.3-windows-x64.zip",
-          "sha256": "37e49843040d55212e675343ed737fd74c6aa798192b83b0c6acbb0fbd6286cb",
+          "sha256": "f0256b8904cde8d65a75606006f8e10964fcf54399e013c1673d84088142806b",
           "executable": "bin/ArduRover.exe"
         }
       }
@@ -334,7 +334,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Tracker-4.5.1-windows-x64.zip",
-          "sha256": "ff1ba72ebddac56236e9b6cf4566568593de4faf013fc3d7310f7c0f363abc4b",
+          "sha256": "ded4c5c4c3f2f0ade7fbdf0b600766aac285aaef2470fde626c3a00159493424",
           "executable": "bin/AntennaTracker.exe"
         }
       }
@@ -364,7 +364,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Tracker-4.5.3-windows-x64.zip",
-          "sha256": "55b4ab082c6e8cf2e7aa5cf52f836cccbe8ff5c8de12159fa463f032216a94a7",
+          "sha256": "1ae3c0e8f7596b396609499a14d7b4869a44f25c74b8492bfe5c2327217c3cd1",
           "executable": "bin/AntennaTracker.exe"
         }
       }
@@ -394,7 +394,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Tracker-4.5.0-windows-x64.zip",
-          "sha256": "8533b090d981b3f214316f5150d71c3831367e54026ef94a726b8d34ead615e8",
+          "sha256": "56d4cb494dadfc617c8c90efd4b35d80347a2c621d3ce0257b0a38c68c1dcb16",
           "executable": "bin/AntennaTracker.exe"
         }
       }
@@ -424,7 +424,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Rover-4.6.2-windows-x64.zip",
-          "sha256": "92894da90017061e23aaa866c584f7a5adcc1e48ebdcd4192d3e024d0c995672",
+          "sha256": "cfac2525ed683f6e455b7fc8bed875e28f3cf5958e3c396af7547561789d4a30",
           "executable": "bin/ArduRover.exe"
         }
       }
@@ -454,7 +454,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Plane-4.6.3-windows-x64.zip",
-          "sha256": "287d1efdcc5462c3b794c30ae8c94435ae379f0e696932cf23db203a958041ee",
+          "sha256": "b92f834552c5862e801f7bb4660ad0308fdb8cb27c033efb25dba0443e5cb52a",
           "executable": "bin/ArduPlane.exe"
         }
       }
@@ -484,7 +484,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Rover-4.6.0-windows-x64.zip",
-          "sha256": "2ccba4aa4c48b4768b00bf151f8e154975813c21039d141f76fda22aaefb9a3c",
+          "sha256": "ba9401d5d1f62ebb296ee1ed588226d8d06391bef5b3fa558a38975525c7aa7e",
           "executable": "bin/ArduRover.exe"
         }
       }
@@ -514,7 +514,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Rover-4.5.6-windows-x64.zip",
-          "sha256": "1c2e8c9ed33ac96ce18ad12e1be680481a3327b1ecd6b082417400ff35175ad5",
+          "sha256": "74e51593bd304d3d87574eaafa6e283ee4e2e83c33370221f12265716e605bed",
           "executable": "bin/ArduRover.exe"
         }
       }
@@ -544,7 +544,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Plane-4.6.0-windows-x64.zip",
-          "sha256": "b884613c5c5af1111de5cd2b266401427b439c6296f3991dce49ca96355af853",
+          "sha256": "c5ddc7cbb18b3bdb6a010a10d4b2386a7c2d384c7730b74cec6ae929603b0546",
           "executable": "bin/ArduPlane.exe"
         }
       }
@@ -574,7 +574,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Rover-4.5.7-windows-x64.zip",
-          "sha256": "58b2a44aea22763a3dc278c52bd70954f2e5a8980cd67c9ef72f5013274bc33e",
+          "sha256": "392a201c3b80351791975c809f64bbdbad75bf148b2c3a6e200632ff42bd6344",
           "executable": "bin/ArduRover.exe"
         }
       }
@@ -604,7 +604,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Rover-4.6.1-windows-x64.zip",
-          "sha256": "d5877f030fa11816329590db6f73ff35163d55f7f3906ab15a710f5fa3f96ffa",
+          "sha256": "b29da18db6482ff0e45a7553aedf0124154998e9605bfed55ece79da6009e662",
           "executable": "bin/ArduRover.exe"
         }
       }
@@ -634,7 +634,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Rover-4.5.2-windows-x64.zip",
-          "sha256": "1871d6d8ac37db22d3fe3951c294c416aa413c56b98ccca233d37c2b1a4e362a",
+          "sha256": "c50d575d81118824110c2f5ef86f775d89676fad60219659e44bd95bf47ffb0e",
           "executable": "bin/ArduRover.exe"
         }
       }
@@ -664,7 +664,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Rover-4.5.5-windows-x64.zip",
-          "sha256": "c903ef0a50f2255f342bafd0a2469773f734d2ec49dca0a7d2f30f7adeee5ee7",
+          "sha256": "041fadbe4401f234a5b33fa54919e198c293b2dee0c1708f07761b74789d09cc",
           "executable": "bin/ArduRover.exe"
         }
       }
@@ -694,7 +694,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Rover-4.5.3-windows-x64.zip",
-          "sha256": "a915a0d3af15e2a4075cd0bb31065194f17548ceb7bdd83189d12a66b5db4571",
+          "sha256": "46b706c2a2d93964980393b6d32d7b63fc6433c1aa8d08d5be5d5e2597e7213e",
           "executable": "bin/ArduRover.exe"
         }
       }
@@ -724,7 +724,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Rover-4.5.1-windows-x64.zip",
-          "sha256": "5274e9205caf07d8e1ad3de4d90cb409168560a748f5ae05d589bf1924c53da1",
+          "sha256": "c49dded4ff0947fc8ee4be16ca1e31640358172ff42493a73c7f96f15d27c5e6",
           "executable": "bin/ArduRover.exe"
         }
       }
@@ -754,7 +754,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Plane-4.6.1-windows-x64.zip",
-          "sha256": "bf77476e0d508ad3027dc2f343c9a8e3028f8b87c0e89c7d931a86719a31fbfe",
+          "sha256": "682cb3e5f72ff6ddc8d729074cbb819633690a6d6b8db60aeaee7048e6230dc5",
           "executable": "bin/ArduPlane.exe"
         }
       }
@@ -784,7 +784,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Rover-4.5.4-windows-x64.zip",
-          "sha256": "4fa004ca12fc723f65fafe34653176fa84fa429290ec07cb8425615397dc87cb",
+          "sha256": "b1af023126a71b7d27fe0376152d38bc1f56dc6d7455409ff18cc8660690bf2b",
           "executable": "bin/ArduRover.exe"
         }
       }
@@ -814,7 +814,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Plane-4.6.2-windows-x64.zip",
-          "sha256": "efe5ba9c7a4f6950606bc2fbebd05a512acb27b38db591e624bb6872f9e61020",
+          "sha256": "b845cdc8d303e2322ce460554d3ca2a70248284ad57bb643b63fd459d59ff22c",
           "executable": "bin/ArduPlane.exe"
         }
       }
@@ -844,7 +844,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Rover-4.5.0-windows-x64.zip",
-          "sha256": "119b5de401ac1a83aaf3a835f1f389129e285e2fe3951caf7781a58da1cc43b5",
+          "sha256": "4d68a0c51b1fdaf0caf0ff82d6b9bc1cc2963eded64541b092855627f4dbfb3b",
           "executable": "bin/ArduRover.exe"
         }
       }
@@ -874,7 +874,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Plane-4.5.7-windows-x64.zip",
-          "sha256": "44f48ddb7bf1b4890702834507b63bc17bbc9ed7875a05067a648f15405687be",
+          "sha256": "984fdc017bb2f9c96dc8b2d4025642d31033b3d37b7a3c63ed8c8fc449508ded",
           "executable": "bin/ArduPlane.exe"
         }
       }
@@ -904,7 +904,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Plane-4.5.5-windows-x64.zip",
-          "sha256": "3f0624db303cb2b9ec487bae1cd20e3b945e97b3e4fb8277dcbc1bba4c55343b",
+          "sha256": "ec477b9553e4a7fdd4c13f5107310d284fba1b51f2d6c96ac3d31c3836cd3384",
           "executable": "bin/ArduPlane.exe"
         }
       }
@@ -934,7 +934,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Plane-4.5.4-windows-x64.zip",
-          "sha256": "e3e0c65788c3e1dba5aa52b3accd6692543658e81fe86fc45a55e782316c2c63",
+          "sha256": "c2db38c7ac7b7e109d4221721c83bd13dbe3fffc0e7514bf7164d6d68549d286",
           "executable": "bin/ArduPlane.exe"
         }
       }
@@ -964,7 +964,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Plane-4.5.3-windows-x64.zip",
-          "sha256": "82b44c97f78bb2ee82beec09d27262f5e18c89ca11cba3d52c833fba2441b379",
+          "sha256": "9e6bac24f6a1188412c6da519873b4baeffb6f0da634d1eec912e573b19e1a84",
           "executable": "bin/ArduPlane.exe"
         }
       }
@@ -994,7 +994,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Plane-4.5.6-windows-x64.zip",
-          "sha256": "884c762c3a7e25840394e4c24f1f8656898b09241281102511129eff36244b69",
+          "sha256": "f2ac52b586514766b15565fb43e09041081827f9b863c38b910ce71b2544e410",
           "executable": "bin/ArduPlane.exe"
         }
       }
@@ -1024,7 +1024,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Plane-4.5.2-windows-x64.zip",
-          "sha256": "324a2f8a68f882a3231f671988a596632f7f10143910cf827efb29ba445da00c",
+          "sha256": "7e939f240d1914a1e8e145f3a2f7c1efec8cc0dfedadd0a774cef957329b9931",
           "executable": "bin/ArduPlane.exe"
         }
       }
@@ -1054,7 +1054,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Plane-4.5.1-windows-x64.zip",
-          "sha256": "1169cb42430c01767f0cc851a84327c116497071d4d41a6529b700db205078cc",
+          "sha256": "475c0ed5ed28da7dad5c91a176476a7fe8482ad568ef4d987cc0adad6e983c5c",
           "executable": "bin/ArduPlane.exe"
         }
       }
@@ -1084,7 +1084,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Copter-4.5.1-windows-x64.zip",
-          "sha256": "25714f66bc6617f6b822fdaa4a5a03188a076297781882b12b538c92c5889e3c",
+          "sha256": "0578490c1ff21fd562874567bbdc599992dbf1f000fc7aa919d32d088c010b4c",
           "executable": "bin/ArduCopter.exe"
         }
       }
@@ -1114,7 +1114,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Copter-4.5.4-windows-x64.zip",
-          "sha256": "6952cd63b860d247db9f0d612fd49f2e152d4e89ca057e7dde35e01dcb069a6b",
+          "sha256": "43d32ad42f7ba0946fefde43b6d4587ec442de21f0a56534598e84aae3b751ed",
           "executable": "bin/ArduCopter.exe"
         }
       }
@@ -1144,7 +1144,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Copter-4.5.6-windows-x64.zip",
-          "sha256": "cbe7e6feea59cb8aa7541b11983b88e1c86b70c378e8916b60c65036581ef496",
+          "sha256": "53d16e04b9fdeeaf852534e6dd7262443d6f5d77dc3c60c3c7e58fcda3153cf8",
           "executable": "bin/ArduCopter.exe"
         }
       }
@@ -1174,7 +1174,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Copter-4.5.0-windows-x64.zip",
-          "sha256": "8e647939298925a73a677804c51aff5fe62d514a4858892d2e799c472917a446",
+          "sha256": "d717e4579d2e406a0b76d9ee3609fa33d4d2036bf89dc650a847534b094b31eb",
           "executable": "bin/ArduCopter.exe"
         }
       }
@@ -1204,7 +1204,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Copter-4.6.1-windows-x64.zip",
-          "sha256": "79bfde5ecb2187c6b6863a1d0e89b1978092c438e12c42a852d9b7b9d701d926",
+          "sha256": "968b978acba777404602eb84c60354293795f7473e7ad5e5e21d4e3da7ff92ab",
           "executable": "bin/ArduCopter.exe"
         }
       }
@@ -1234,7 +1234,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Copter-4.6.2-windows-x64.zip",
-          "sha256": "d2c3cec8a206e2cdb15daf1147ce903ad65606792d7682a08744b8410bc6b020",
+          "sha256": "5c41e408fee4549ad3b8e50c023160b6abfa55e745f35bff28d2f011a488098d",
           "executable": "bin/ArduCopter.exe"
         }
       }
@@ -1264,7 +1264,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Copter-4.5.7-windows-x64.zip",
-          "sha256": "7d2171d893fee8b5732b38a480c63496d34e5b138ac5f6770ac68116afbfb0e6",
+          "sha256": "862562bd56c3f3c6ce0c9c9cf7f4e697a9be96d1431fcaa921a9d32e38c279cd",
           "executable": "bin/ArduCopter.exe"
         }
       }
@@ -1294,7 +1294,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Copter-4.5.5-windows-x64.zip",
-          "sha256": "04be8f4980e2ea4fdcbec0c9cbde1582e885382cadfb4792894161e9cdffcaaa",
+          "sha256": "1884830d1d01fce3bde8f265c4d89daadcf8f134da49d4517c8fb6a4e12e2743",
           "executable": "bin/ArduCopter.exe"
         }
       }
@@ -1324,7 +1324,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-ArduSub-4.5.5-windows-x64.zip",
-          "sha256": "b72a0387d1024e95a052eca76602b89cf3750482c0ba5e08962e2a2f7d7e7494",
+          "sha256": "33523e7411354ecf03da1468edbaadd74215a40963b9cb8654a2c235d7d28106",
           "executable": "bin/ArduSub.exe"
         }
       }
@@ -1354,7 +1354,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Copter-4.5.2-windows-x64.zip",
-          "sha256": "2034d72d8ec0e25c89524e8048586998a91dc78baa6f5695d9e0a0a34fb5c78d",
+          "sha256": "8402ac78a7195a93bac701772288fca7afcd1da949da2bf0280693d2c01461bb",
           "executable": "bin/ArduCopter.exe"
         }
       }
@@ -1384,7 +1384,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Copter-4.5.3-windows-x64.zip",
-          "sha256": "9f6d4292866d012037d3abb870fa64d5fcd198f9bfca5a8098c08a5bff8ed5cc",
+          "sha256": "82f3a70116a44b2466f69516a5dc32a5a199569bf3e9e91d713c02d2f8119132",
           "executable": "bin/ArduCopter.exe"
         }
       }
@@ -1414,7 +1414,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-ArduSub-4.5.6-windows-x64.zip",
-          "sha256": "6cdb844401a07a6fbea6c67ef984d84910392f9f299b23019f7f7b8b52eb3b8a",
+          "sha256": "c801171b6f8f33f77b043b3fea92a928997659b609dd874420391b92ba6ab154",
           "executable": "bin/ArduSub.exe"
         }
       }
@@ -1444,7 +1444,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Copter-4.6.0-windows-x64.zip",
-          "sha256": "f73a775e1a987c49cf967f9a84f566e85d4138363d235b62bf77323764190226",
+          "sha256": "61133bbd7034c524feb66e48be252e251f3a08636e9e8217d2aa0d1114b22eaf",
           "executable": "bin/ArduCopter.exe"
         }
       }
@@ -1474,7 +1474,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Plane-4.5.0-windows-x64.zip",
-          "sha256": "5f2768c5814d0eab5ce59f38b7295c515536599c08795b4e9629aaf9b018f2db",
+          "sha256": "1ff854587835e6aa79db8a9a3b3610c9f85a466cbdfea8277408948e94d7940e",
           "executable": "bin/ArduPlane.exe"
         }
       }
@@ -1504,7 +1504,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-ArduSub-4.5.7-windows-x64.zip",
-          "sha256": "c073564cfba2fb6a139f94f1b741b2b419db736a650048a09f06ce9d88250d67",
+          "sha256": "ed097b93e9162bc292bfce0486cc66ad63484b0b533a53cd8a40e0beea9510c7",
           "executable": "bin/ArduSub.exe"
         }
       }
@@ -1534,7 +1534,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-ArduSub-4.5.3-windows-x64.zip",
-          "sha256": "2dc64abb0a5579a40b267da1cf983efecbd1f1975ccf1f09e7c9f560c7121fcb",
+          "sha256": "9fa6e3de042c508c0f78a8ea65fa0a65638ed7a1be4f4ded94a7a25be052557d",
           "executable": "bin/ArduSub.exe"
         }
       }
@@ -1564,7 +1564,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-ArduSub-4.5.0-windows-x64.zip",
-          "sha256": "4a72327f561b58c7876c4aeb83b65a15c9f72c17baca589f3b80162baaf06cb9",
+          "sha256": "2026b38deab5ccdb72ac2deeeb668f2b620987ba1609b560ac36d21f551949c1",
           "executable": "bin/ArduSub.exe"
         }
       }
@@ -1594,7 +1594,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-ArduSub-4.5.1-windows-x64.zip",
-          "sha256": "d0a7f1df69503e7850e8d0100bf4a78beabba488ff15ae1ce83172ff2322708a",
+          "sha256": "367e4d74d5d994449b8bf8b56235633cc6c13b4bd030afabbc1c8b34a45e8072",
           "executable": "bin/ArduSub.exe"
         }
       }
@@ -1624,7 +1624,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Copter-4.6.3-windows-x64.zip",
-          "sha256": "6a3a0cc3f24004aa06bea6940af4580b7cc353e8585089726cde3e4c8dde35b1",
+          "sha256": "fc6dcc4d736c2e6caff0aeb7a7e7df7f2422d66c72f56e4b5a87b5add2c29efd",
           "executable": "bin/ArduCopter.exe"
         }
       }
