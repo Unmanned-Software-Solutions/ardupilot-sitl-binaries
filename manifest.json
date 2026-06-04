@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-04T05:55:47Z",
+  "updatedAt": "2026-06-04T08:59:40Z",
   "stable": {
     "tracker": "4.6.3",
     "rover": "4.6.3",
@@ -361,6 +361,11 @@
           "asset": "ardupilot-sitl-Tracker-4.5.3-macos-arm64.tar.gz",
           "sha256": "a2d42392f7c98c54058b4cf571881645b0380974b08cb3831af4ba53fac70ccb",
           "executable": "bin/AntennaTracker"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.5.3-windows-x64.zip",
+          "sha256": "55b4ab082c6e8cf2e7aa5cf52f836cccbe8ff5c8de12159fa463f032216a94a7",
+          "executable": "bin/AntennaTracker.exe"
         }
       }
     },
@@ -1316,6 +1321,11 @@
           "asset": "ardupilot-sitl-ArduSub-4.5.5-macos-arm64.tar.gz",
           "sha256": "3d9ed2661af57403fe94626ed2d8f3ca6fa07ddaf73ae1aa58cee75d676f8af5",
           "executable": "bin/ArduSub"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.5-windows-x64.zip",
+          "sha256": "b72a0387d1024e95a052eca76602b89cf3750482c0ba5e08962e2a2f7d7e7494",
+          "executable": "bin/ArduSub.exe"
         }
       }
     },
@@ -1401,6 +1411,11 @@
           "asset": "ardupilot-sitl-ArduSub-4.5.6-macos-arm64.tar.gz",
           "sha256": "ac0930d9470df95b831e70deb3e61d2a1954153dc086781dde2e5d67c8be97b7",
           "executable": "bin/ArduSub"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.6-windows-x64.zip",
+          "sha256": "6cdb844401a07a6fbea6c67ef984d84910392f9f299b23019f7f7b8b52eb3b8a",
+          "executable": "bin/ArduSub.exe"
         }
       }
     },
@@ -1486,6 +1501,11 @@
           "asset": "ardupilot-sitl-ArduSub-4.5.7-macos-arm64.tar.gz",
           "sha256": "17d1e88613da7e9bf543e3f10938e373a0e635f276b09a62a7ffa84391a97584",
           "executable": "bin/ArduSub"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.7-windows-x64.zip",
+          "sha256": "c073564cfba2fb6a139f94f1b741b2b419db736a650048a09f06ce9d88250d67",
+          "executable": "bin/ArduSub.exe"
         }
       }
     },
@@ -1511,6 +1531,11 @@
           "asset": "ardupilot-sitl-ArduSub-4.5.3-macos-arm64.tar.gz",
           "sha256": "47c689ea2bdac3e7374dc9ed95f1a1c06e8023227d1fd5916859fc2eac269485",
           "executable": "bin/ArduSub"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.3-windows-x64.zip",
+          "sha256": "2dc64abb0a5579a40b267da1cf983efecbd1f1975ccf1f09e7c9f560c7121fcb",
+          "executable": "bin/ArduSub.exe"
         }
       }
     },
@@ -1536,6 +1561,11 @@
           "asset": "ardupilot-sitl-ArduSub-4.5.0-macos-arm64.tar.gz",
           "sha256": "8cf7c45eb42b07b5eb19e14bfa53fae93d7839c07f2e72686fb3f29ad1c41bcd",
           "executable": "bin/ArduSub"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.0-windows-x64.zip",
+          "sha256": "4a72327f561b58c7876c4aeb83b65a15c9f72c17baca589f3b80162baaf06cb9",
+          "executable": "bin/ArduSub.exe"
         }
       }
     },
@@ -1561,6 +1591,11 @@
           "asset": "ardupilot-sitl-ArduSub-4.5.1-macos-arm64.tar.gz",
           "sha256": "63609ddf73fe1a91fa1ca361ee5841930806dc693c135877dea2383d07e5cc96",
           "executable": "bin/ArduSub"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.1-windows-x64.zip",
+          "sha256": "d0a7f1df69503e7850e8d0100bf4a78beabba488ff15ae1ce83172ff2322708a",
+          "executable": "bin/ArduSub.exe"
         }
       }
     },
