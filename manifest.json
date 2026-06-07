@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-07T09:29:51Z",
+  "updatedAt": "2026-06-07T12:50:58Z",
   "stable": {
     "tracker": "4.6.3",
     "rover": "4.6.3",
@@ -19,7 +19,7 @@
       "platforms": {
         "linux-arm64": {
           "asset": "ardupilot-sitl-Tracker-4.6.2-linux-arm64.tar.gz",
-          "sha256": "<html><body><h1>504",
+          "sha256": "56fcdb09184296ea6e6d863b7a33d6162fa4c6f5da080a5742d5b35604ee5f67",
           "executable": "bin/AntennaTracker"
         },
         "linux-x64": {
@@ -34,7 +34,7 @@
         },
         "windows-x64": {
           "asset": "ardupilot-sitl-Tracker-4.6.2-windows-x64.zip",
-          "sha256": "<html><body><h1>504",
+          "sha256": "6ebaff8d2172d623c888088f696c601fe3af46d5c85ac61b3f14ccf9b760c176",
           "executable": "bin/AntennaTracker.exe"
         }
       }
@@ -59,7 +59,7 @@
         },
         "macos-arm64": {
           "asset": "ardupilot-sitl-Tracker-4.6.0-macos-arm64.tar.gz",
-          "sha256": "<html><body><h1>504",
+          "sha256": "3cf7952e75f1e84b1f7f05a113fd0217ca10bd261d3dc81e9ddfdf394fc2dbf5",
           "executable": "bin/AntennaTracker"
         },
         "windows-x64": {
@@ -1609,7 +1609,7 @@
       "platforms": {
         "linux-arm64": {
           "asset": "ardupilot-sitl-Copter-4.6.3-linux-arm64.tar.gz",
-          "sha256": "a6ae42d6f13eb03b6721126c250f9b8ddb9dc983d581c84cfa69e3764e331c6f",
+          "sha256": "<!DOCTYPE",
           "executable": "bin/ArduCopter"
         },
         "linux-x64": {
