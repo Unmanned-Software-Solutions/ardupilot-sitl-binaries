@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-28T12:45:33Z",
+  "updatedAt": "2026-06-28T16:41:39Z",
   "stable": {
     "tracker": "4.6.3",
     "rover": "4.6.3",
@@ -919,7 +919,7 @@
       "platforms": {
         "linux-arm64": {
           "asset": "ardupilot-sitl-Plane-4.5.4-linux-arm64.tar.gz",
-          "sha256": "72c288b15e766c0feb9d2b0a70c9bc5c6126221d2fa7e4aebb46865e2d28f590",
+          "sha256": "<!DOCTYPE",
           "executable": "bin/ArduPlane"
         },
         "linux-x64": {
