@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-29T05:55:13Z",
+  "updatedAt": "2026-06-29T09:54:52Z",
   "stable": {
     "tracker": "4.6.3",
     "rover": "4.6.3",
@@ -19,7 +19,7 @@
       "platforms": {
         "linux-arm64": {
           "asset": "ardupilot-sitl-Tracker-4.6.2-linux-arm64.tar.gz",
-          "sha256": "<!DOCTYPE",
+          "sha256": "56fcdb09184296ea6e6d863b7a33d6162fa4c6f5da080a5742d5b35604ee5f67",
           "executable": "bin/AntennaTracker"
         },
         "linux-x64": {
