@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-20T05:26:47Z",
+  "updatedAt": "2026-07-20T09:24:49Z",
   "stable": {
     "tracker": "4.6.3",
     "rover": "4.6.3",
@@ -452,6 +452,11 @@
           "sha256": "bd888db25b65c378408cad68668a365324bfc169e654ccc064b9cc6feb65c80b",
           "executable": "bin/ArduPlane"
         },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Plane-4.6.3-macos-x64.tar.gz",
+          "sha256": "5bd10c78f9abc8b416b0765a69c833f9a5711e9f09b38210f90625076f118635",
+          "executable": "bin/ArduPlane"
+        },
         "windows-x64": {
           "asset": "ardupilot-sitl-Plane-4.6.3-windows-x64.zip",
           "sha256": "b92f834552c5862e801f7bb4660ad0308fdb8cb27c033efb25dba0443e5cb52a",
@@ -540,6 +545,11 @@
         "macos-arm64": {
           "asset": "ardupilot-sitl-Plane-4.6.0-macos-arm64.tar.gz",
           "sha256": "06f587ace1b0b1cfdac21ec0919b2a5bc6e3c7f695796912a5548a1a3ef3ddc2",
+          "executable": "bin/ArduPlane"
+        },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Plane-4.6.0-macos-x64.tar.gz",
+          "sha256": "5083eb1b4466e6f13de721b2fb1b01cf19c3ae92086530dc7e4c1147aa8d1565",
           "executable": "bin/ArduPlane"
         },
         "windows-x64": {
@@ -752,6 +762,11 @@
           "sha256": "d62e79ad2cc120c1fda3b7400d332b8358f850bb09c62a3e99ec90bb890e9b68",
           "executable": "bin/ArduPlane"
         },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Plane-4.6.1-macos-x64.tar.gz",
+          "sha256": "02104972af7393c6ad6c2be08fd6e7cc7294f5058d29eaac82161c4cd779ea49",
+          "executable": "bin/ArduPlane"
+        },
         "windows-x64": {
           "asset": "ardupilot-sitl-Plane-4.6.1-windows-x64.zip",
           "sha256": "682cb3e5f72ff6ddc8d729074cbb819633690a6d6b8db60aeaee7048e6230dc5",
@@ -810,6 +825,11 @@
         "macos-arm64": {
           "asset": "ardupilot-sitl-Plane-4.6.2-macos-arm64.tar.gz",
           "sha256": "8006e6a132d7dbee2e5c8fe9a58a0d4c4d3274030036aacd3abbd9ed4520e2be",
+          "executable": "bin/ArduPlane"
+        },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Plane-4.6.2-macos-x64.tar.gz",
+          "sha256": "75b730c8f4b4f08bd79c66e73a6a56ec23a6655127fa1e4809d0b43ead863b69",
           "executable": "bin/ArduPlane"
         },
         "windows-x64": {
@@ -872,6 +892,11 @@
           "sha256": "54d52efe1430420f7538d8f0d0a70f0bce3a56f7dbeed6cc1e235211f4c2b326",
           "executable": "bin/ArduPlane"
         },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.7-macos-x64.tar.gz",
+          "sha256": "1e764734d5ec2139559af7e741dbf583543a51449642c69ec5b0b5141324d735",
+          "executable": "bin/ArduPlane"
+        },
         "windows-x64": {
           "asset": "ardupilot-sitl-Plane-4.5.7-windows-x64.zip",
           "sha256": "984fdc017bb2f9c96dc8b2d4025642d31033b3d37b7a3c63ed8c8fc449508ded",
@@ -900,6 +925,11 @@
         "macos-arm64": {
           "asset": "ardupilot-sitl-Plane-4.5.5-macos-arm64.tar.gz",
           "sha256": "0048c8a8a725a720b91ec559a9a9915e19907b151807044e06850358ac25b83c",
+          "executable": "bin/ArduPlane"
+        },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.5-macos-x64.tar.gz",
+          "sha256": "49fcafa7a2475ca54ab8cd851447b855058ea2526bf20f8600f34128bd53ca36",
           "executable": "bin/ArduPlane"
         },
         "windows-x64": {
@@ -932,6 +962,11 @@
           "sha256": "980ce7f6d6300d488c50c821dc6e2322cd525a752e3bd501c0deb806eab3f1a3",
           "executable": "bin/ArduPlane"
         },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.4-macos-x64.tar.gz",
+          "sha256": "9e6efee7d331d2bbe8efc878ccfb55f50870de160e6f2cb864f02edc788281b8",
+          "executable": "bin/ArduPlane"
+        },
         "windows-x64": {
           "asset": "ardupilot-sitl-Plane-4.5.4-windows-x64.zip",
           "sha256": "c2db38c7ac7b7e109d4221721c83bd13dbe3fffc0e7514bf7164d6d68549d286",
@@ -960,6 +995,11 @@
         "macos-arm64": {
           "asset": "ardupilot-sitl-Plane-4.5.3-macos-arm64.tar.gz",
           "sha256": "151427b52293876de6108dd0a5c772e54958bce0cd59649c9141d0d7bb67a80c",
+          "executable": "bin/ArduPlane"
+        },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Plane-4.5.3-macos-x64.tar.gz",
+          "sha256": "3ffd26e89275792b7aef821c5fb9ead703eede4ece2f4c71c64b97e515111267",
           "executable": "bin/ArduPlane"
         },
         "windows-x64": {
