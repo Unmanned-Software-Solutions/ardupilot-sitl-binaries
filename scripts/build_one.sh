@@ -36,12 +36,26 @@ canonical_out_name() {
 
 cd ardupilot
 
-# macOS arm64 link fix for ArduPilot ≤ 4.5.5: the modern Apple linker enforces
+# macOS link fix for ArduPilot ≤ 4.5.5: the modern Apple linker enforces
 # pointer alignment that AP_FWVersion::fwver didn't satisfy until 4.5.6. The
 # `ld_classic` flag falls back to the older linker which tolerates the old
 # layout. Harmless on newer versions where the issue is already fixed.
+#
+# But `-ld_classic` only EXISTS on the Xcode 15+ linker — it was added at the
+# same time as the new linker it opts out of. On an older toolchain (e.g. Xcode
+# 14 on an Intel Mac) the old linker is already the default, and passing the
+# flag fails the link outright with "library not found for -ld_classic". So
+# probe for support instead of assuming it from the platform name.
 if [[ "$platform" == macos-* ]]; then
-  export LDFLAGS="${LDFLAGS:-} -Wl,-ld_classic"
+  probe="$(mktemp -t ldprobe).c"
+  echo 'int main(){return 0;}' > "$probe"
+  if clang "$probe" -Wl,-ld_classic -o "${probe}.out" >/dev/null 2>&1; then
+    export LDFLAGS="${LDFLAGS:-} -Wl,-ld_classic"
+    echo "note: linker supports -ld_classic, enabling it"
+  else
+    echo "note: linker does not support -ld_classic (pre-Xcode 15), skipping it"
+  fi
+  rm -f "$probe" "${probe}.out"
 fi
 
 ./waf configure --board sitl
