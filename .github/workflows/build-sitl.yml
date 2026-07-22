@@ -46,7 +46,7 @@ jobs:
           # macos-13 (Intel) runners are scarce — queue times routinely exceed 30 min,
           # which gates manifest publication for everyone else. Keep it in the matrix
           # so we build when a runner is available, but don't let it block.
-          - { os: macos-13,            platform: macos-x64,   ext: tar.gz, continue: true  }
+          - { os: macos-15-intel, platform: macos-x64, ext: tar.gz, continue: true }
           # Windows is not yet validated end-to-end; keep it non-blocking until the
           # Cygwin/MSYS2 toolchain wiring lands.
           - { os: windows-2022,        platform: windows-x64, ext: zip,    continue: true  }
