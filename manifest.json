@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-28T09:14:41Z",
+  "updatedAt": "2026-07-28T12:55:14Z",
   "stable": {
     "rover": "4.7.0",
     "copter": "4.7.0",
@@ -31,6 +31,11 @@
           "asset": "ardupilot-sitl-Rover-4.7.0-macos-arm64.tar.gz",
           "sha256": "c309997645dda0e7fd83b666aa49bbfc2f048f904e3f96c8feb11aaefa3956c6",
           "executable": "bin/ArduRover"
+        },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Rover-4.7.0-macos-x64.tar.gz",
+          "sha256": "59878a1f516afd68049822574d1b45bcddf0c957944c80eec849ebd6f07eda64",
+          "executable": "bin/ArduRover"
         }
       }
     },
@@ -55,6 +60,11 @@
         "macos-arm64": {
           "asset": "ardupilot-sitl-Copter-4.7.0-macos-arm64.tar.gz",
           "sha256": "c5a74fa092493e4eede2d0059fb4975a764f81af42019c1d5b6cc241077a89c6",
+          "executable": "bin/ArduCopter"
+        },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Copter-4.7.0-macos-x64.tar.gz",
+          "sha256": "6fe4239560243f85432f181ae84ab58b084d1ba7cbbd3609332f1e126953ba5b",
           "executable": "bin/ArduCopter"
         }
       }
@@ -309,7 +319,7 @@
         },
         "macos-x64": {
           "asset": "ardupilot-sitl-Tracker-4.5.7-macos-x64.tar.gz",
-          "sha256": "73be96aa59319d4b4f9aabe14daa417b2eaf268f3c299eeee45a7f2b1076bba4",
+          "sha256": "64b54f80818e84b13dada3411403dda5fa80a2b16c8babf64a5fe629ba86c481",
           "executable": "bin/AntennaTracker"
         },
         "windows-x64": {
@@ -1707,6 +1717,11 @@
           "sha256": "4019942e9f8c03888fecb5223135d8575b4a53ab7408db8d6a3e4f85e05360e4",
           "executable": "bin/ArduCopter"
         },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Copter-4.5.3-macos-x64.tar.gz",
+          "sha256": "15667d9b2ed1cc376a54eb9c236b2a795866570dd28d50f96239dd8433203db3",
+          "executable": "bin/ArduCopter"
+        },
         "windows-x64": {
           "asset": "ardupilot-sitl-Copter-4.5.3-windows-x64.zip",
           "sha256": "82f3a70116a44b2466f69516a5dc32a5a199569bf3e9e91d713c02d2f8119132",
@@ -1737,6 +1752,11 @@
           "sha256": "ac0930d9470df95b831e70deb3e61d2a1954153dc086781dde2e5d67c8be97b7",
           "executable": "bin/ArduSub"
         },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.6-macos-x64.tar.gz",
+          "sha256": "f36ec6b0c0c1d02f9df715b43022a03c19cec1c79e5b177f8852a869e3f66637",
+          "executable": "bin/ArduSub"
+        },
         "windows-x64": {
           "asset": "ardupilot-sitl-ArduSub-4.5.6-windows-x64.zip",
           "sha256": "c801171b6f8f33f77b043b3fea92a928997659b609dd874420391b92ba6ab154",
@@ -1765,6 +1785,11 @@
         "macos-arm64": {
           "asset": "ardupilot-sitl-Copter-4.6.0-macos-arm64.tar.gz",
           "sha256": "34c5675caa91276a23b26920300aad3dd7ad78c20bc27bf7c6c54fe210466194",
+          "executable": "bin/ArduCopter"
+        },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Copter-4.6.0-macos-x64.tar.gz",
+          "sha256": "02bfe904254e432d33377e7823a0f7dfc7005901e39258de34bf0a728b057fb4",
           "executable": "bin/ArduCopter"
         },
         "windows-x64": {
@@ -1832,6 +1857,11 @@
           "sha256": "17d1e88613da7e9bf543e3f10938e373a0e635f276b09a62a7ffa84391a97584",
           "executable": "bin/ArduSub"
         },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.7-macos-x64.tar.gz",
+          "sha256": "4858ffe19e6973b5c1bce0d425fb7a4c9d2974437096936d94fe137725c58c3a",
+          "executable": "bin/ArduSub"
+        },
         "windows-x64": {
           "asset": "ardupilot-sitl-ArduSub-4.5.7-windows-x64.zip",
           "sha256": "ed097b93e9162bc292bfce0486cc66ad63484b0b533a53cd8a40e0beea9510c7",
@@ -1860,6 +1890,11 @@
         "macos-arm64": {
           "asset": "ardupilot-sitl-ArduSub-4.5.3-macos-arm64.tar.gz",
           "sha256": "47c689ea2bdac3e7374dc9ed95f1a1c06e8023227d1fd5916859fc2eac269485",
+          "executable": "bin/ArduSub"
+        },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.3-macos-x64.tar.gz",
+          "sha256": "a1f106c6e09a7154e0478db51769352ff5eac35c965e8d793a19dd7da98191ce",
           "executable": "bin/ArduSub"
         },
         "windows-x64": {
@@ -1892,6 +1927,11 @@
           "sha256": "8cf7c45eb42b07b5eb19e14bfa53fae93d7839c07f2e72686fb3f29ad1c41bcd",
           "executable": "bin/ArduSub"
         },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.0-macos-x64.tar.gz",
+          "sha256": "1a0927d3207031ed219db4158101fc05f029fb22a6688d0d2c0fe65fed4b7d7c",
+          "executable": "bin/ArduSub"
+        },
         "windows-x64": {
           "asset": "ardupilot-sitl-ArduSub-4.5.0-windows-x64.zip",
           "sha256": "2026b38deab5ccdb72ac2deeeb668f2b620987ba1609b560ac36d21f551949c1",
@@ -1922,6 +1962,11 @@
           "sha256": "63609ddf73fe1a91fa1ca361ee5841930806dc693c135877dea2383d07e5cc96",
           "executable": "bin/ArduSub"
         },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-ArduSub-4.5.1-macos-x64.tar.gz",
+          "sha256": "cf25e8366b6fe9527fff466d30e49b7f334d1c24941551e8ac4ba7c9defb9624",
+          "executable": "bin/ArduSub"
+        },
         "windows-x64": {
           "asset": "ardupilot-sitl-ArduSub-4.5.1-windows-x64.zip",
           "sha256": "367e4d74d5d994449b8bf8b56235633cc6c13b4bd030afabbc1c8b34a45e8072",
@@ -1950,6 +1995,11 @@
         "macos-arm64": {
           "asset": "ardupilot-sitl-Copter-4.6.3-macos-arm64.tar.gz",
           "sha256": "c34f6b32b662d9661d09a4d8afa099eb697a0e1406a01b0bb3a61bd7886132e7",
+          "executable": "bin/ArduCopter"
+        },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Copter-4.6.3-macos-x64.tar.gz",
+          "sha256": "4e087e1a4b008684f9300b961584178093c4f9fb310291cc0987a2db19215a24",
           "executable": "bin/ArduCopter"
         },
         "windows-x64": {
