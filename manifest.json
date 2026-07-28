@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-28T05:25:24Z",
+  "updatedAt": "2026-07-28T09:14:41Z",
   "stable": {
     "rover": "4.7.0",
     "copter": "4.7.0",
@@ -1670,6 +1670,11 @@
         "macos-arm64": {
           "asset": "ardupilot-sitl-Copter-4.5.2-macos-arm64.tar.gz",
           "sha256": "8b7c1c3ddf8aabf8807fb87321ae2e0d0bbbbc94ac72de2e93e2fbe6b455c0ef",
+          "executable": "bin/ArduCopter"
+        },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Copter-4.5.2-macos-x64.tar.gz",
+          "sha256": "50937b9d5f5e8f9653e34fe1f163807ad0de981791ca1674a67254ee0a9963dd",
           "executable": "bin/ArduCopter"
         },
         "windows-x64": {
