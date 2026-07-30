@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-30T09:11:56Z",
+  "updatedAt": "2026-07-30T12:53:21Z",
   "stable": {
     "rover": "4.7.0",
     "copter": "4.7.0",
@@ -1179,7 +1179,7 @@
       "platforms": {
         "linux-arm64": {
           "asset": "ardupilot-sitl-Plane-4.5.4-linux-arm64.tar.gz",
-          "sha256": "<!DOCTYPE",
+          "sha256": "72c288b15e766c0feb9d2b0a70c9bc5c6126221d2fa7e4aebb46865e2d28f590",
           "executable": "bin/ArduPlane"
         },
         "linux-x64": {
