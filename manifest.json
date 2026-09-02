@@ -1,14 +1,114 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-02T04:32:10Z",
+  "updatedAt": "2026-09-02T08:34:41Z",
   "stable": {
-    "rover": "4.7.0",
-    "copter": "4.7.0",
-    "plane": "4.7.0",
-    "tracker": "4.7.0",
+    "tracker": "4.7.1",
+    "plane": "4.7.1",
+    "copter": "4.7.1",
+    "rover": "4.7.1",
     "sub": "4.5.7"
   },
   "builds": [
+    {
+      "vehicle": "tracker",
+      "version": "4.7.1",
+      "ardupilotTag": "AntennaTracker-4.7.1",
+      "ardupilotReleasedAt": "2026-09-02",
+      "ourReleaseTag": "AntennaTracker-4.7.1",
+      "wafTarget": "antennatracker",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-AntennaTracker-4.7.1-linux-arm64.tar.gz",
+          "sha256": "4a860e6f687a50ed26fd3cc0717ac05ced7c5f1bd7ac787fef75122e432b4df1",
+          "executable": "bin/AntennaTracker"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-AntennaTracker-4.7.1-linux-x64.tar.gz",
+          "sha256": "00f5c0b2cc2ae30cc3b87aff209705dc729ae385467fd4f360bc26f355799dcc",
+          "executable": "bin/AntennaTracker"
+        },
+        "macos-arm64": {
+          "asset": "ardupilot-sitl-AntennaTracker-4.7.1-macos-arm64.tar.gz",
+          "sha256": "b3f8e7c5ce81d0d89bc88eb993fb15f60efac7eccdf4fb9f977eebf4d2ed7d17",
+          "executable": "bin/AntennaTracker"
+        }
+      }
+    },
+    {
+      "vehicle": "plane",
+      "version": "4.7.1",
+      "ardupilotTag": "Plane-4.7.1",
+      "ardupilotReleasedAt": "2026-09-02",
+      "ourReleaseTag": "Plane-4.7.1",
+      "wafTarget": "plane",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Plane-4.7.1-linux-arm64.tar.gz",
+          "sha256": "7cfdc3091adbbb2615c639facc3a55316370b841115ba736707ced1b695be461",
+          "executable": "bin/ArduPlane"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Plane-4.7.1-linux-x64.tar.gz",
+          "sha256": "992c4033b7362854702bd57fd8f4c1b49ee2d353b6bcdff2bec51b96e9cb20a5",
+          "executable": "bin/ArduPlane"
+        },
+        "macos-arm64": {
+          "asset": "ardupilot-sitl-Plane-4.7.1-macos-arm64.tar.gz",
+          "sha256": "f601ab201c36e95272ea289c37505bba52a75fc0fe1b953e431f235db31c8979",
+          "executable": "bin/ArduPlane"
+        }
+      }
+    },
+    {
+      "vehicle": "copter",
+      "version": "4.7.1",
+      "ardupilotTag": "Copter-4.7.1",
+      "ardupilotReleasedAt": "2026-09-02",
+      "ourReleaseTag": "Copter-4.7.1",
+      "wafTarget": "copter",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Copter-4.7.1-linux-arm64.tar.gz",
+          "sha256": "3a63e8cc4d4d0213500af539a15fa104237b052cce7f2fe1ca92490ff64429f9",
+          "executable": "bin/ArduCopter"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Copter-4.7.1-linux-x64.tar.gz",
+          "sha256": "ca55df39da39283f936c9395acf6656e765b98986bbbee2babf0c00a644da60d",
+          "executable": "bin/ArduCopter"
+        },
+        "macos-arm64": {
+          "asset": "ardupilot-sitl-Copter-4.7.1-macos-arm64.tar.gz",
+          "sha256": "6c1d29c1a01849634b6c7a9f4e4336990fe82098586368f47060a4f85bc1f741",
+          "executable": "bin/ArduCopter"
+        }
+      }
+    },
+    {
+      "vehicle": "rover",
+      "version": "4.7.1",
+      "ardupilotTag": "Rover-4.7.1",
+      "ardupilotReleasedAt": "2026-09-02",
+      "ourReleaseTag": "Rover-4.7.1",
+      "wafTarget": "rover",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Rover-4.7.1-linux-arm64.tar.gz",
+          "sha256": "34b2215180ccef51f9d65515813aa76e8c92f580245dbbfd2955279e099acad0",
+          "executable": "bin/ArduRover"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Rover-4.7.1-linux-x64.tar.gz",
+          "sha256": "2350760d0e42f4906acacd2fbad57d56bec9023b1e2060992c9d5a60ddbfa3e8",
+          "executable": "bin/ArduRover"
+        },
+        "macos-arm64": {
+          "asset": "ardupilot-sitl-Rover-4.7.1-macos-arm64.tar.gz",
+          "sha256": "e5bdf759e5c5f20ef1b9fc756d506451047f685671e5e5da6c95680e5fdfde47",
+          "executable": "bin/ArduRover"
+        }
+      }
+    },
     {
       "vehicle": "rover",
       "version": "4.7.0",
