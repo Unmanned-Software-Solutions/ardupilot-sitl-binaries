@@ -1,0 +1,6 @@
+# Shell scripts and the build pipeline must stay LF, even when checked out on a
+# Windows runner with core.autocrlf=true — Cygwin's bash treats a CR as part of
+# the line and breaks (e.g. `cd "$path\r"`). eol=lf pins them regardless.
+*.sh  text eol=lf
+*.py  text eol=lf
+*.yml text eol=lf
