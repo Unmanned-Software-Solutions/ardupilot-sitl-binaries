@@ -21,7 +21,16 @@ case "$ext" in
     tar -C "${src}" -czf "${asset}" .
     ;;
   zip)
-    (cd "${src}" && 7z a -tzip "../../${asset}" .)
+    # 7z is present on the GitHub Windows runner image but not inside the Cygwin
+    # environment we build under; Cygwin's `zip` package covers that case. Prefer
+    # whichever is on PATH so the script works in both.
+    if command -v 7z >/dev/null; then
+      (cd "${src}" && 7z a -tzip "../../${asset}" . >/dev/null)
+    elif command -v zip >/dev/null; then
+      (cd "${src}" && zip -r -q "../../${asset}" .)
+    else
+      echo "no zip tool found (need 7z or zip)"; exit 3
+    fi
     ;;
   *) echo "unknown ext: $ext"; exit 2 ;;
 esac

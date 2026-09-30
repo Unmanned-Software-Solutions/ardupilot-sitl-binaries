@@ -47,8 +47,9 @@ jobs:
           # which gates manifest publication for everyone else. Keep it in the matrix
           # so we build when a runner is available, but don't let it block.
           - { os: macos-13,            platform: macos-x64,   ext: tar.gz, continue: true  }
-          # Windows is not yet validated end-to-end; keep it non-blocking until the
-          # Cygwin/MSYS2 toolchain wiring lands.
+          # Windows builds under Cygwin (see the Windows steps below). Kept
+          # non-blocking until the first green backfill run confirms the toolchain;
+          # flip `continue` to false once validated so regressions surface.
           - { os: windows-2022,        platform: windows-x64, ext: zip,    continue: true  }
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.continue }}
@@ -116,23 +117,70 @@ jobs:
 
       - name: Install build deps (Windows / Cygwin)
         if: startsWith(matrix.os, 'windows') && steps.skip.outputs.skip != 'true'
-        # ArduPilot's Windows SITL build path is Cygwin — see ArduPilot's own
-        # Tools/scripts/build_ci.sh for the canonical script that Mission Planner uses.
+        # Cygwin is ArduPilot's own Windows SITL toolchain (see ArduPilot's
+        # .github/workflows/cygwin_build.yml). Pinned to v6.1: v5 crashed on the
+        # current windows-2022 image — it fetched cygwin.com/sha512.sum with
+        # Invoke-WebRequest sans -UseBasicParsing and PowerShell 5.1's legacy IE
+        # parser threw NullReferenceException. v6.1 downloads the hash to a file.
+        # Package set follows ArduPilot's, but on python39 (the current mirror
+        # dropped python37, and 3.9 still ships distutils + cygwin -future/-lxml,
+        # unlike 3.12). No gcc version pin — current gcc-g++ (13.x) builds fine
+        # because the default SITL config doesn't enable -Werror.
+        uses: cygwin/cygwin-install-action@v6.1
+        with:
+          packages: >-
+            gcc-g++ python39 python39-devel python39-pip python39-setuptools
+            python39-wheel python39-future python39-lxml git procps-ng gettext
+            zip unzip
+          add-to-path: false
+
+      - name: Prepare Cygwin Python (Windows)
+        if: startsWith(matrix.os, 'windows') && steps.skip.outputs.skip != 'true'
+        # waf is invoked as `python ./waf`, so python3.9 must answer to `python`.
+        # empy is pinned to 3.3.4 (4.x dropped the `@)` markup the dronecan
+        # generator uses) and pexpect is imported by waf's bin-embed step — same
+        # pins as the Linux and macOS legs. future/lxml come from the cygwin
+        # packages above. Using `python -m pip` avoids needing a pip symlink.
+        # SHELLOPTS=igncr: the runner writes step scripts with CRLF and real
+        # Cygwin bash (unlike Git bash) chokes on the \r; igncr makes it ignore them.
+        env:
+          SHELLOPTS: igncr
+        shell: C:\cygwin\bin\bash.exe -eo pipefail '{0}'
         run: |
-          choco install -y cygwin cyg-get
-          cyg-get python3 python3-future python3-lxml git gcc-g++ make ccache libtool autoconf automake
-          # Further wiring (PATH, GCC selection, etc.) goes here — placeholder until validated.
-        shell: pwsh
+          export PATH="/usr/bin:$(cygpath "${SYSTEMROOT}")/system32"
+          ln -sf /usr/bin/python3.9 /usr/bin/python
+          # One install, no --upgrade: these aren't pre-installed on a fresh Cygwin,
+          # and Cygwin's pip (v26) rejects --upgrade here.
+          python -m pip install --progress-bar off 'empy==3.3.4' pexpect dronecan
 
-      - name: Build SITL
-        if: steps.skip.outputs.skip != 'true'
+      - name: Build & package SITL (Unix)
+        if: ${{ steps.skip.outputs.skip != 'true' && !startsWith(matrix.os, 'windows') }}
         shell: bash
-        run: bash scripts/build_one.sh "${{ inputs.vehicle }}" "${{ inputs.ardupilot_tag }}" "${{ matrix.platform }}"
+        run: |
+          bash scripts/build_one.sh "${{ inputs.vehicle }}" "${{ inputs.ardupilot_tag }}" "${{ matrix.platform }}"
+          bash scripts/package_one.sh "${{ inputs.vehicle }}" "${{ inputs.ardupilot_tag }}" "${{ matrix.platform }}" "${{ matrix.ext }}"
 
-      - name: Package archive
-        if: steps.skip.outputs.skip != 'true'
-        shell: bash
-        run: bash scripts/package_one.sh "${{ inputs.vehicle }}" "${{ inputs.ardupilot_tag }}" "${{ matrix.platform }}" "${{ matrix.ext }}"
+      - name: Build & package SITL (Windows / Cygwin)
+        if: ${{ steps.skip.outputs.skip != 'true' && startsWith(matrix.os, 'windows') }}
+        # Must run under Cygwin's bash (not the runner's Git bash) so waf picks up the
+        # cygwin python/g++ toolchain. safe.directory is needed because the tree was
+        # checked out by the runner's native git but is now read by Cygwin git.
+        # SHELLOPTS=igncr makes Cygwin bash tolerate the CRLF the runner writes into
+        # both this script and the bash-invoked scripts/*.sh (inherited via env).
+        env:
+          SHELLOPTS: igncr
+        shell: C:\cygwin\bin\bash.exe -eo pipefail '{0}'
+        run: |
+          export PATH="/usr/local/bin:/usr/bin:$(cygpath "${SYSTEMROOT}")/system32"
+          ws="$(cygpath -u "$GITHUB_WORKSPACE")"
+          # The tree was checked out by the runner's native git; Cygwin git sees a
+          # different owner and trips its dubious-ownership guard. waf runs
+          # `git submodule status --recursive` during the build, so the guard must be
+          # lifted for ardupilot AND every submodule — the `*` wildcard covers all.
+          git config --global --add safe.directory '*'
+          cd "$ws"
+          bash scripts/build_one.sh "${{ inputs.vehicle }}" "${{ inputs.ardupilot_tag }}" "${{ matrix.platform }}"
+          bash scripts/package_one.sh "${{ inputs.vehicle }}" "${{ inputs.ardupilot_tag }}" "${{ matrix.platform }}" "${{ matrix.ext }}"
 
       - name: Upload to GitHub Release
         if: steps.skip.outputs.skip != 'true'
@@ -145,5 +193,5 @@ jobs:
             dist/ardupilot-sitl-${{ inputs.ardupilot_tag }}-${{ matrix.platform }}.${{ matrix.ext }}.sha256
 
 # Manifest regeneration is its own workflow (`update-manifest.yml`) triggered on
-# `release: published`. Decoupling avoids waiting on slow runners (macos-13 queues
-# for hours, windows is still placeholder) to publish the manifest for the rest.
+# `release: published`. Decoupling avoids waiting on slow runners (macos-13 and the
+# Cygwin windows leg both queue/build slowly) to publish the manifest for the rest.
