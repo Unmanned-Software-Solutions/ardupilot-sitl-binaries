@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-11T17:38:10Z",
+  "updatedAt": "2026-11-11T18:28:21Z",
   "stable": {
     "sub": "4.7.2",
     "plane": "4.7.2",
@@ -241,6 +241,16 @@
           "asset": "ardupilot-sitl-Plane-4.7.1-macos-arm64.tar.gz",
           "sha256": "f601ab201c36e95272ea289c37505bba52a75fc0fe1b953e431f235db31c8979",
           "executable": "bin/ArduPlane"
+        },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Plane-4.7.1-macos-x64.tar.gz",
+          "sha256": "ab3c4b662baf87452f2f6f77cdd7f0d915fbd903fd9ab2498776435fa18eb3e6",
+          "executable": "bin/ArduPlane"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Plane-4.7.1-windows-x64.zip",
+          "sha256": "cd4f857b058c925accc1e1485fb485209812dca21ccc35a5d3306d419471fee1",
+          "executable": "bin/ArduPlane.exe"
         }
       }
     },
