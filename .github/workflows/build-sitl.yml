@@ -111,25 +111,18 @@ jobs:
           pip3 install --break-system-packages \
             pyserial pymavlink future lxml 'empy==3.3.4' pexpect fastcrc dronecan
 
-      - name: Read Cygwin package list (Windows)
-        id: cygpkgs
-        if: startsWith(matrix.os, 'windows') && steps.skip.outputs.skip != 'true'
-        shell: bash
-        run: |
-          pkgs=$(grep -m1 -E '^\s*packages:' ardupilot/.github/workflows/cygwin_build.yml 2>/dev/null \
-                   | sed -E 's/^\s*packages:\s*//' || true)
-          if [ -z "$pkgs" ]; then
-            pkgs="cygwin64 gcc-g++=10.2.0-1 ccache python39 python39-future python39-lxml python39-pip python39-setuptools python39-wheel git procps gettext"
-            echo "cygwin_build.yml not found at this tag — using fallback package list"
-          fi
-          echo "Cygwin packages: $pkgs"
-          echo "packages=$pkgs" >> "$GITHUB_OUTPUT"
-
+      # Windows SITL is built with Cygwin, like ArduPilot's own
+      # .github/workflows/cygwin_build.yml. We don't copy the package list from
+      # each ArduPilot tag: older tags pin versions (e.g. gcc-g++ 10.2.0-1) that the
+      # Cygwin mirror has since dropped. gcc 13.4 / python 3.12 is what ArduPilot
+      # master builds with. Only one Python is installed so `python3` is unambiguous.
       - name: Install Cygwin (Windows)
         if: startsWith(matrix.os, 'windows') && steps.skip.outputs.skip != 'true'
         uses: cygwin/cygwin-install-action@v6
         with:
-          packages: ${{ steps.cygpkgs.outputs.packages }}
+          packages: >-
+            gcc-g++=13.4.0-1 ccache git procps-ng gettext
+            python312 python312-pip python312-future python312-lxml
           add-to-path: false
 
       - name: Install Python build deps (Windows)
