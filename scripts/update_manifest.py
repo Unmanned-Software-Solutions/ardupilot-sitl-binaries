@@ -30,7 +30,7 @@ VEHICLE_PATTERNS = {
     "plane":   re.compile(r"^(?:Plane|ArduPlane)-(\d+\.\d+\.\d+)$"),
     "rover":   re.compile(r"^(?:Rover|APMrover2)-(\d+\.\d+\.\d+)$"),
     "tracker": re.compile(r"^(?:Tracker|AntennaTracker)-(\d+\.\d+\.\d+)$"),
-    "sub":     re.compile(r"^ArduSub-(\d+\.\d+\.\d+)$"),
+    "sub":     re.compile(r"^(?:Sub|ArduSub)-(\d+\.\d+\.\d+)$"),
 }
 
 WAF_TARGET = {
@@ -79,17 +79,24 @@ def fetch_sha(repo: str, tag: str, name: str) -> str:
     return out.split()[0] if out else ""
 
 
-def fetch_upstream_release_date(tag: str) -> str:
+def fetch_upstream_release_date(tag: str) -> str | None:
     """Date the ArduPilot tag itself was created (not when we built it).
 
     Annotated tags expose the date on the tag object; lightweight tags point
     straight at a commit and 404 on /git/tags/<sha>. Fall back to the commit
     committer date in that case.
+
+    Returns None if the tag no longer exists upstream (ArduPilot occasionally
+    renames or deletes tags, e.g. AntennaTracker-4.7.1 -> Tracker-4.7.1).
     """
-    out = subprocess.check_output(
-        ["gh", "api", f"/repos/ArduPilot/ardupilot/git/refs/tags/{tag}"],
-        text=True,
-    )
+    try:
+        out = subprocess.check_output(
+            ["gh", "api", f"/repos/ArduPilot/ardupilot/git/refs/tags/{tag}"],
+            text=True,
+        )
+    except subprocess.CalledProcessError:
+        print(f"warning: upstream tag {tag} not found", file=sys.stderr)
+        return None
     ref = json.loads(out)
     sha = ref["object"]["sha"]
     ref_type = ref["object"].get("type", "commit")
@@ -145,7 +152,7 @@ def main() -> int:
             "vehicle": vehicle,
             "version": version,
             "ardupilotTag": tag,
-            "ardupilotReleasedAt": fetch_upstream_release_date(tag),
+            "ardupilotReleasedAt": fetch_upstream_release_date(tag) or (rel.get("publishedAt") or "")[:10],
             "ourReleaseTag": tag,
             "wafTarget": WAF_TARGET[vehicle],
             "platforms": platforms,

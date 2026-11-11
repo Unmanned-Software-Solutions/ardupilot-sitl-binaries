@@ -22,7 +22,7 @@ VEHICLE_PATTERNS = {
     "plane":   re.compile(r"^(?:Plane|ArduPlane)-(\d+\.\d+\.\d+)$"),
     "rover":   re.compile(r"^(?:Rover|APMrover2)-(\d+\.\d+\.\d+)$"),
     "tracker": re.compile(r"^(?:Tracker|AntennaTracker)-(\d+\.\d+\.\d+)$"),
-    "sub":     re.compile(r"^ArduSub-(\d+\.\d+\.\d+)$"),
+    "sub":     re.compile(r"^(?:Sub|ArduSub)-(\d+\.\d+\.\d+)$"),
 }
 
 MIN_VERSION = (4, 5, 0)
