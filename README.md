@@ -63,7 +63,7 @@ Each archive contains:
   bin/ArduCopter                 (or ArduCopter.exe on Windows)
   params/                        (snapshot from ArduPilot Tools/autotest at this tag)
   README.txt                     (build provenance: runner, date, commit)
-  cygwin/*.dll                   (Windows builds only)
+  bin/cyg*.dll                   (Windows builds only: Cygwin runtime)
 ```
 
 ## License

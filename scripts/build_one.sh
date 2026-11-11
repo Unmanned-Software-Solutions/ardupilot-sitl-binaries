@@ -44,8 +44,13 @@ if [[ "$platform" == macos-* ]]; then
   export LDFLAGS="${LDFLAGS:-} -Wl,-ld_classic"
 fi
 
-./waf configure --board sitl
-./waf "$waf_target"
+if [[ "$platform" == windows-* ]]; then
+  python3 ./waf --toolchain x86_64-pc-cygwin --board sitl configure
+  python3 ./waf "$waf_target" -j8
+else
+  ./waf configure --board sitl
+  ./waf "$waf_target"
+fi
 
 # Locate built binary — path differs slightly by vehicle, but always under build/sitl/bin.
 src_bin="build/sitl/bin/${bin_name}"
@@ -58,9 +63,16 @@ out_dir="build-out/${platform}"
 mkdir -p "${out_dir}/bin" "${out_dir}/params"
 
 dest_name=$(canonical_out_name)
-[[ "${src_bin}" == *.exe ]] && dest_name="${dest_name}.exe"
-cp "ardupilot/${src_bin}" "${out_dir}/bin/${dest_name}"
-[[ "${platform}" != windows-* ]] && chmod +x "${out_dir}/bin/${dest_name}"
+if [[ "${platform}" == windows-* ]]; then
+  cp "ardupilot/${src_bin}" "${out_dir}/bin/${dest_name}.exe"
+  cygcheck "${out_dir}/bin/${dest_name}.exe" | grep -oP 'cyg[^\s\\/]+\.dll' | sort -u | while read -r dll; do
+    cp -v "/usr/bin/${dll}" "${out_dir}/bin/"
+  done
+  test -f "${out_dir}/bin/cygwin1.dll" || { echo "cygwin1.dll was not bundled"; exit 3; }
+else
+  cp "ardupilot/${src_bin}" "${out_dir}/bin/${dest_name}"
+  chmod +x "${out_dir}/bin/${dest_name}"
+fi
 
 # Freeze param files at this tag so client never has to fetch from raw.githubusercontent.com.
 cp -r ardupilot/Tools/autotest/default_params "${out_dir}/params/default_params"
