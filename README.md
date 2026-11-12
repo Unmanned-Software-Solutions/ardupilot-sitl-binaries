@@ -68,6 +68,21 @@ Each archive contains:
 
 ## License
 
-The build scripts and workflows in this repository are released under GPL v3,
-matching ArduPilot's upstream license. Each published binary inherits the
-license of the ArduPilot source tag it was built from.
+Copyright (C) 2026 Unmanned Software Solutions Sp. z o.o.
+
+| Files | License |
+|---|---|
+| `scripts/`, `.github/workflows/`, the documentation (`*.md`) | GNU General Public License v3.0 or later (`GPL-3.0-or-later`), see [`LICENSE`](LICENSE) |
+| `manifest.json`, `overrides/parm/` | CC0 1.0 Universal (`CC0-1.0`), see [`LICENSES/CC0-1.0.txt`](LICENSES/CC0-1.0.txt) |
+
+Every script, workflow and parameter file names its license in an
+`SPDX-License-Identifier` line; `manifest.json` cannot hold a comment, so this
+table is its license statement. The data files are dedicated to the public
+domain so any tool can read, copy and ship them without conditions.
+
+The published binaries are built from ArduPilot and are licensed under
+`GPL-3.0-or-later`, like ArduPilot. Windows archives also contain Cygwin
+runtime libraries under their own licenses.
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) lists everything inside
+the archives, the license texts in [`LICENSES/`](LICENSES), and how to get
+the source code.
