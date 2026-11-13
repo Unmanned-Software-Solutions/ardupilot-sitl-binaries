@@ -59,3 +59,11 @@ work offline once the binary cache is warm.
 `plane.parm`). Per-frame overlays use `<vehicle>-<frame>.parm` (e.g.
 `plane-jet.parm`, `motorboat.parm`). The client decides which files to
 layer for each (vehicle, frame) combination.
+
+## License
+
+The `.parm` files are dedicated to the public domain under CC0 1.0 Universal
+(`../LICENSES/CC0-1.0.txt`), so clients can copy and ship them without
+conditions. Start every new file with the line
+`# SPDX-License-Identifier: CC0-1.0`; it is a comment, so it is not a
+parameter.

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-3.0-or-later
 # Batch-build macos-arm64 SITL binaries for every (vehicle, version) listed in
 # manifest.json that doesn't already have a macos-arm64 asset, then upload them
 # to the matching GitHub Release.

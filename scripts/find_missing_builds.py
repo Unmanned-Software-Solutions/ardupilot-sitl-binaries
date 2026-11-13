@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
 """
 Emit a JSON array of (vehicle, version, ardupilotTag) entries that exist as
 ArduPilot upstream tags but do NOT yet have a corresponding GitHub Release in
