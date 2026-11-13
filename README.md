@@ -5,8 +5,7 @@ Pre-built ArduPilot SITL binaries for `copter`, `plane`, `rover`,
 `macos-arm64`, and `windows-x64`.
 
 Built from upstream `ArduPilot/ardupilot` tags (4.5.0 and newer) and published
-as standard GitHub Releases. A `manifest.json` at the repo root indexes every
-available build for tooling that wants to download them programmatically.
+as standard GitHub Releases.
 
 ## What this repo does
 
@@ -15,8 +14,6 @@ available build for tooling that wants to download them programmatically.
   to the upstream tag (e.g. `Copter-4.6.3`). Each release holds one asset per
   platform plus the matching `default_params/*.parm` files frozen at that tag so
   binaries and parameters can never drift.
-- Maintains `manifest.json` at the repo root as a machine-readable index of every
-  available build.
 
 ## Why per-vehicle-per-version releases
 
@@ -41,9 +38,6 @@ half-empty release. Independent tags avoid both.
 - `.github/workflows/discover-versions.yml` — scheduled poll of ArduPilot tags;
   dispatches `build-sitl` for any (vehicle, version) we haven't published yet.
 - `scripts/build_one.sh` — builds one (vehicle, version) on the current runner.
-- `scripts/update_manifest.py` — rebuilds `manifest.json` by listing existing
-  GitHub Releases.
-- `manifest.json` — the live index.
 
 ## Asset naming
 

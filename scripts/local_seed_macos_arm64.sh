@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Batch-build macos-arm64 SITL binaries for every (vehicle, version) listed in
-# manifest.json that doesn't already have a macos-arm64 asset, then upload them
+# Batch-build macos-arm64 SITL binaries for every (vehicle, version)
+# that doesn't already have a macos-arm64 asset, then upload them
 # to the matching GitHub Release.
 #
 # This is an OPTIONAL accelerator for an Apple Silicon Mac to help drain the
@@ -51,23 +51,46 @@ if [[ ! -d ardupilot/.git ]]; then
   git clone https://github.com/ArduPilot/ardupilot.git
 fi
 
-# Build the list of (vehicle, version, tag) to seed. Read straight from the
-# repo's manifest.json — single source of truth. macOS ships bash 3.2 which
-# lacks `mapfile`, so use a temp file and a portable read loop.
+# Build the list of (vehicle, version, tag) to seed: every published release that
+# has at least one binary archive but no macos-arm64 one.
+# macOS ships bash 3.2 which lacks `mapfile`, so use a temp file and a portable read loop.
+RELEASES_FILE="$WORK/.releases.tsv"
 TARGETS_FILE="$WORK/.targets.tsv"
-/usr/bin/python3 - <<PY > "$TARGETS_FILE"
-import json
-m = json.load(open("$REPO_ROOT/manifest.json"))
-vf = "$vehicle_filter" or None
-vver = "$version_filter" or None
-for b in m["builds"]:
-    if "macos-arm64" in b["platforms"]:
+gh api --paginate "repos/$REPO/releases?per_page=100" \
+  --jq '.[] | select(.draft | not) | [.tag_name, ([.assets[].name] | join(" "))] | @tsv' \
+  > "$RELEASES_FILE"
+/usr/bin/python3 - "$RELEASES_FILE" "$vehicle_filter" "$version_filter" <<'PY' > "$TARGETS_FILE"
+import re
+import sys
+
+releases_file, vehicle_filter, version_filter = sys.argv[1:4]
+# Release tags are ArduPilot's; older vehicle names are still in use for some tags.
+vehicles = {
+    "copter":  re.compile(r"^(?:Copter|ArduCopter)-(\d+\.\d+\.\d+)$"),
+    "plane":   re.compile(r"^(?:Plane|ArduPlane)-(\d+\.\d+\.\d+)$"),
+    "rover":   re.compile(r"^(?:Rover|APMrover2)-(\d+\.\d+\.\d+)$"),
+    "tracker": re.compile(r"^(?:Tracker|AntennaTracker)-(\d+\.\d+\.\d+)$"),
+    "sub":     re.compile(r"^(?:Sub|ArduSub)-(\d+\.\d+\.\d+)$"),
+}
+platforms = "linux-x64|linux-arm64|macos-x64|macos-arm64|windows-x64"
+
+for line in open(releases_file):
+    tag, _, names = line.rstrip("\n").partition("\t")
+    match = next(((v, p.match(tag)) for v, p in vehicles.items() if p.match(tag)), None)
+    if match is None:
         continue
-    if vf and b["vehicle"] != vf:
+    vehicle, version = match[0], match[1].group(1)
+    archive = re.compile(rf"^ardupilot-sitl-{re.escape(tag)}-(?:{platforms})\.(?:tar\.gz|zip)$")
+    assets = names.split()
+    if not any(archive.match(name) for name in assets):
         continue
-    if vver and b["version"] != vver:
+    if f"ardupilot-sitl-{tag}-macos-arm64.tar.gz" in assets:
         continue
-    print(f"{b['vehicle']}\t{b['version']}\t{b['ardupilotTag']}")
+    if vehicle_filter and vehicle != vehicle_filter:
+        continue
+    if version_filter and version != version_filter:
+        continue
+    print(f"{vehicle}\t{version}\t{tag}")
 PY
 
 n_targets=$(wc -l < "$TARGETS_FILE" | tr -d ' ')
@@ -90,8 +113,8 @@ while IFS=$'\t' read -r vehicle version tag; do
   echo "Building ${tag} (vehicle=${vehicle})"
   echo "================================================================"
 
-  # Double-check: if someone (CI) uploaded the asset between manifest read and
-  # now, skip without rebuilding.
+  # Double-check: if someone (CI) uploaded the asset since the releases were
+  # listed, skip without rebuilding.
   if gh release view "$tag" --repo "$REPO" --json assets --jq '.assets[].name' 2>/dev/null \
        | grep -Fxq "$asset"; then
     echo "  already published — skipping"
@@ -131,5 +154,3 @@ echo
 echo "================================================================"
 echo "seeded $success binaries, $fail failures"
 echo "================================================================"
-echo "The release:published events will trigger update-manifest.yml in CI"
-echo "automatically, so the consuming manifest.json will catch up shortly."
