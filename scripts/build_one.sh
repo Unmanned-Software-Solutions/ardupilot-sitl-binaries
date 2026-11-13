@@ -23,7 +23,8 @@ case "$vehicle" in
 esac
 
 # Canonical binary names produced by ArduPilot's waf (lowercase). The packaging
-# step renames them to the conventional MixedCase used in the manifest.
+# step renames them to the conventional MixedCase that clients expect in the
+# archive (e.g. bin/ArduCopter).
 canonical_out_name() {
   case "$vehicle" in
     copter)  echo "ArduCopter" ;;

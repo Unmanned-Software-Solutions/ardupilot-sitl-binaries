@@ -161,7 +161,3 @@ jobs:
           files: |
             dist/ardupilot-sitl-${{ inputs.ardupilot_tag }}-${{ matrix.platform }}.${{ matrix.ext }}
             dist/ardupilot-sitl-${{ inputs.ardupilot_tag }}-${{ matrix.platform }}.${{ matrix.ext }}.sha256
-
-# Manifest regeneration is its own workflow (`update-manifest.yml`) triggered on
-# `release: published`. Decoupling avoids waiting on slow runners (macos-13 queues
-# for hours, windows is still placeholder) to publish the manifest for the rest.
