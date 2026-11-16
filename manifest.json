@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-16T16:23:44Z",
+  "updatedAt": "2026-11-16T20:20:27Z",
   "stable": {
     "sub": "4.7.2",
     "plane": "4.7.2",
@@ -2284,7 +2284,7 @@
         },
         "macos-x64": {
           "asset": "ardupilot-sitl-ArduSub-4.5.7-macos-x64.tar.gz",
-          "sha256": "4858ffe19e6973b5c1bce0d425fb7a4c9d2974437096936d94fe137725c58c3a",
+          "sha256": "<!DOCTYPE",
           "executable": "bin/ArduSub"
         },
         "windows-x64": {
