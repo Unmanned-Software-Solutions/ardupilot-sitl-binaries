@@ -1,14 +1,179 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-18T04:21:57Z",
+  "updatedAt": "2026-11-18T08:24:45Z",
   "stable": {
-    "sub": "4.7.2",
-    "plane": "4.7.2",
-    "rover": "4.7.2",
-    "tracker": "4.7.2",
-    "copter": "4.7.2"
+    "sub": "4.7.3",
+    "tracker": "4.7.3",
+    "plane": "4.7.3",
+    "rover": "4.7.3",
+    "copter": "4.7.3"
   },
   "builds": [
+    {
+      "vehicle": "sub",
+      "version": "4.7.3",
+      "ardupilotTag": "Sub-4.7.3",
+      "ardupilotReleasedAt": "2026-11-14",
+      "ourReleaseTag": "Sub-4.7.3",
+      "wafTarget": "sub",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Sub-4.7.3-linux-arm64.tar.gz",
+          "sha256": "2476491214a42c96d477681a038301d066e5f6c7f20fa67fffa7c750c3626631",
+          "executable": "bin/ArduSub"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Sub-4.7.3-linux-x64.tar.gz",
+          "sha256": "e279103f9b2eeafedb051c9e267cdd505faaef77225b602ff89ca6913f8ee2a1",
+          "executable": "bin/ArduSub"
+        },
+        "macos-arm64": {
+          "asset": "ardupilot-sitl-Sub-4.7.3-macos-arm64.tar.gz",
+          "sha256": "b2171ca0315cb62bfc75b7e13d9395016d91197e9ab4a1aa647c399b72cfad8f",
+          "executable": "bin/ArduSub"
+        },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Sub-4.7.3-macos-x64.tar.gz",
+          "sha256": "7249ae52d2a7f24d70dd3d74c0bcf809c5435656e6d1dc4aa7df11b5a861f9f3",
+          "executable": "bin/ArduSub"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Sub-4.7.3-windows-x64.zip",
+          "sha256": "cfdbc175ad7a3014ce373148c444c224075498b718cc825ee9e8cc452c1f1c13",
+          "executable": "bin/ArduSub.exe"
+        }
+      }
+    },
+    {
+      "vehicle": "tracker",
+      "version": "4.7.3",
+      "ardupilotTag": "Tracker-4.7.3",
+      "ardupilotReleasedAt": "2026-11-14",
+      "ourReleaseTag": "Tracker-4.7.3",
+      "wafTarget": "antennatracker",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Tracker-4.7.3-linux-arm64.tar.gz",
+          "sha256": "e135c8e6e7d9180059a1c28efd01bbbb4ba0f94c6926dfd800fb338004435abe",
+          "executable": "bin/AntennaTracker"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.7.3-linux-x64.tar.gz",
+          "sha256": "8b68054d40071ac8ff63b9a9553e1986af77889bb59c4986444e76ab2a6bcfc8",
+          "executable": "bin/AntennaTracker"
+        },
+        "macos-arm64": {
+          "asset": "ardupilot-sitl-Tracker-4.7.3-macos-arm64.tar.gz",
+          "sha256": "56ca0f06a108e73a6481de1f3e6163eb43b945a804a8c7ab743e0826bd4745ba",
+          "executable": "bin/AntennaTracker"
+        },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Tracker-4.7.3-macos-x64.tar.gz",
+          "sha256": "875ba81464ed4a2aa124cc52bcb89cf39f40794301acd8911b166af41edf284c",
+          "executable": "bin/AntennaTracker"
+        }
+      }
+    },
+    {
+      "vehicle": "plane",
+      "version": "4.7.3",
+      "ardupilotTag": "Plane-4.7.3",
+      "ardupilotReleasedAt": "2026-11-14",
+      "ourReleaseTag": "Plane-4.7.3",
+      "wafTarget": "plane",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Plane-4.7.3-linux-arm64.tar.gz",
+          "sha256": "2cae6e770f32c6a8a8876507d09f4e71fd27dd0748eef12a79876378e60598d8",
+          "executable": "bin/ArduPlane"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Plane-4.7.3-linux-x64.tar.gz",
+          "sha256": "32b073a06bc010c3ceb2cbd570c18004994c1760577b356b7e9cf476dab06fc8",
+          "executable": "bin/ArduPlane"
+        },
+        "macos-arm64": {
+          "asset": "ardupilot-sitl-Plane-4.7.3-macos-arm64.tar.gz",
+          "sha256": "debc5e0c51fb745c81284d2a3488363beefa9030b1cefe380f961f8fe13c108f",
+          "executable": "bin/ArduPlane"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Plane-4.7.3-windows-x64.zip",
+          "sha256": "d46b82fa8a1b737eca9460b34bab352cc6ae03d959af7c9c624158a5a8321afb",
+          "executable": "bin/ArduPlane.exe"
+        }
+      }
+    },
+    {
+      "vehicle": "rover",
+      "version": "4.7.3",
+      "ardupilotTag": "Rover-4.7.3",
+      "ardupilotReleasedAt": "2026-11-14",
+      "ourReleaseTag": "Rover-4.7.3",
+      "wafTarget": "rover",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Rover-4.7.3-linux-arm64.tar.gz",
+          "sha256": "c71c57f54c05955f800ed343e6b38e832829ddb9e0b86cb513ef5a98617a7484",
+          "executable": "bin/ArduRover"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Rover-4.7.3-linux-x64.tar.gz",
+          "sha256": "7dbc3de5da6c1d3e2f3e1512f3dd0c5a34c2e1249140761c40d39737e5c00e42",
+          "executable": "bin/ArduRover"
+        },
+        "macos-arm64": {
+          "asset": "ardupilot-sitl-Rover-4.7.3-macos-arm64.tar.gz",
+          "sha256": "6d528f0bacf7f1d82fea567117d0a29a6e9fa73651514a9706971130b4d3522d",
+          "executable": "bin/ArduRover"
+        },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Rover-4.7.3-macos-x64.tar.gz",
+          "sha256": "856cbd41c25f987af4671899f215a2430da294ce8de81c427b71402d9d5e916d",
+          "executable": "bin/ArduRover"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Rover-4.7.3-windows-x64.zip",
+          "sha256": "96e8ba180fa286e11ab5876c367c1db00702168b60d87a6cbdc9b4a669ef9a59",
+          "executable": "bin/ArduRover.exe"
+        }
+      }
+    },
+    {
+      "vehicle": "copter",
+      "version": "4.7.3",
+      "ardupilotTag": "Copter-4.7.3",
+      "ardupilotReleasedAt": "2026-11-14",
+      "ourReleaseTag": "Copter-4.7.3",
+      "wafTarget": "copter",
+      "platforms": {
+        "linux-arm64": {
+          "asset": "ardupilot-sitl-Copter-4.7.3-linux-arm64.tar.gz",
+          "sha256": "cd5c4f1a6901aa36bce28f8df6e75d978a119d6633bf3583775c42543d8134bc",
+          "executable": "bin/ArduCopter"
+        },
+        "linux-x64": {
+          "asset": "ardupilot-sitl-Copter-4.7.3-linux-x64.tar.gz",
+          "sha256": "1b44169634342fcd5f77a3a6f534a2a86bb8b2984f9ac42f96223039871dd96e",
+          "executable": "bin/ArduCopter"
+        },
+        "macos-arm64": {
+          "asset": "ardupilot-sitl-Copter-4.7.3-macos-arm64.tar.gz",
+          "sha256": "71ec910adfec10e105ce25f5cf3ae142a995e55a315f613bea27ce9050671dac",
+          "executable": "bin/ArduCopter"
+        },
+        "macos-x64": {
+          "asset": "ardupilot-sitl-Copter-4.7.3-macos-x64.tar.gz",
+          "sha256": "2fe7587a947af35612ac1f4c4b6d934493fc8f1730dd52b79d1d0f460bc3da83",
+          "executable": "bin/ArduCopter"
+        },
+        "windows-x64": {
+          "asset": "ardupilot-sitl-Copter-4.7.3-windows-x64.zip",
+          "sha256": "4c235351fab109725a208a58e839be8cc9a1715fdd0d77345082b5b83f5f308b",
+          "executable": "bin/ArduCopter.exe"
+        }
+      }
+    },
     {
       "vehicle": "sub",
       "version": "4.7.1",
