@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-3.0-or-later
 # Pack the build-out/<platform> tree into a release asset and write its sha256.
 # Args: <vehicle> <ardupilot_tag> <platform> <ext>   (ext = tar.gz | zip)
 

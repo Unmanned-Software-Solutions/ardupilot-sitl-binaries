@@ -1,0 +1,9 @@
+From ardupilot/libraries/AP_RCTelemetry/spektrumTelemetrySensors.h (ArduPilot tag Plane-4.7.2):
+
+Copyright 2013 by Horizon Hobby, Inc.
+All Rights Reserved Worldwide.
+
+Released to Public Domain
+
+This header file may be incorporated into non-Horizon
+products.

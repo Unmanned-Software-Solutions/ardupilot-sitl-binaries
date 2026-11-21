@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
 """
 Rebuild manifest.json by walking every Release in this repo and inspecting the
 assets attached to each. The manifest is intentionally derived from the Releases
