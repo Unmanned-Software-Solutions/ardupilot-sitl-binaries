@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-24T12:28:11Z",
+  "updatedAt": "2026-11-24T16:22:37Z",
   "stable": {
     "sub": "4.7.3",
     "tracker": "4.7.3",
@@ -1609,7 +1609,7 @@
         },
         "macos-x64": {
           "asset": "ardupilot-sitl-Rover-4.5.4-macos-x64.tar.gz",
-          "sha256": "fccc2b5d6796adf4b46ee033f8548c7805150a336d8c5d5fe56dd76cabf0083a",
+          "sha256": "<!DOCTYPE",
           "executable": "bin/ArduRover"
         },
         "windows-x64": {
