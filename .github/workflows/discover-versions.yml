@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 name: Discover new ArduPilot versions
 
 # Polls ArduPilot's git tag list every 6h. For every (vehicle, version) we

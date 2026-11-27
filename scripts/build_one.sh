@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-3.0-or-later
 # Build one (vehicle, ardupilot_tag) on the current runner.
 # Outputs land in ./build-out/<platform>/{bin,params,README.txt}
 #
